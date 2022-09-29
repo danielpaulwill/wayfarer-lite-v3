@@ -1,13 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Signup from './Signup';
-import GameContainer from './GameContainer';
-import Login from './Login';
-import LandingPage from './LandingPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
