@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :characters
   resources :events
   resources :items
   resources :locations
