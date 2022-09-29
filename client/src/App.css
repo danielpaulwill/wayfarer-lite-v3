@@ -1,38 +1,489 @@
-.App {
+* {
+  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#navbar {
+  width: 100%;
+  /* height: 50px; */
+  color: #FFF;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  border-bottom: solid #FFF 1px;
+  align-content: middle;
+}
+
+#navbarText {
+  margin: auto 10px auto 0;
+}
+
+#navbarButton {
+  color: #FFF;
+  background-color: #000;
+  border: 3px solid #FFF;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#welcome {
+  color: rgb(255, 255, 255);
+  margin: auto auto;
+  width: 50%;
+  padding: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#welcomeHealth {
+  border: solid red 3px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#welcomeStrength {
+  border: solid orange 3px;
+}
+
+#welcomeDefense {
+  border: solid green 3px;
+}
+
+#welcomeLuck {
+  border: solid yellow 3px;
+}
+
+#welcomeButton {
+  color: #FFF;
+  background-color: #000;
+  border: 3px solid #FFF;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 300px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  cursor: pointer;
+}
+
+#welcomeButton:hover {
+  color: #000;
+  background-color: #FFF;
+}
+
+.textInput {
+  color: #FFF;
+  background-color: #000;
+  border: 3px solid #FFF;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0 auto;
+  width: 250px;
+}
+
+.normalButton {
+  color: #FFF;
+  background-color: #000;
+  border: 3px solid #FFF;
+  padding: 10px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.normalButton:hover {
+  background-color: #FFF;
+  color: #000;
+  border: 3px solid #bababa;
+}
+
+::placeholder {
+  color: #FFF;
+  opacity: 60%
+}
+
+#gameContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#characterSidebar {
+  width: 20%;
+  height: 90vh;
+  color: #FFF;
+  text-align: center;
+  padding-top: 20px;
+  border-right: solid #FFF;
+}
+
+#sidebarStats {
+  text-align: left;
+  margin-left: 15%;
+  margin-right: 50px;
+}
+
+#itemsSidebar {
+  width: 20%;
+  height: 90vh;
+  color: #FFF;
+  text-align: center;
+  padding-top: 20px;
+  border-left: solid #FFF;
+  margin: 0 auto 30px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#itemsSidebarContent {
+  padding: 0 15px;
+}
+
+/* .chooseYourItemContainer {
+  height: 80px;
+  width: 65px;
+  color: #FFF;
+  margin: 5px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  border: 1px solid #FFF;
+} */
+
+.gameArea {
+  color: #FFF;
+  margin: 0 0 0 auto;
+  width: 56%;
+  padding: 10px 1.85vw;
+  text-align: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.adventureMain {
+  color: #FFF;
+  width: 54%;
+  height: 90vh;
+  text-align: center;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  margin: 0 auto;
+  display: flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   }
+
+.optionsResult {
+  margin: 0 auto;
+  display: flex;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  .chooseYourAvatarContainer {
+    height: 200px;
+    width: 200px;
+    color: #FFF;
+    border: 3px solid #FFF;
+    margin-top: 20px;
+  }
+
+  .chooseYourAvatarImg {
+    height: 95%;
+    width: 95%;
+    color: #FFF;
+    margin-top: 4%;
+  }
+
+  #professionContainer {
+    /* background-color: red; */
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 80%;
+    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .spacer {
+    border: solid 1px #FFF;
+    padding: 0 15px;
+    margin: 10px;
+    color: #FFF;
+  }
+
+  .spacer:checked {
+    border: solid 1px #FFF;
+    background-color: #FFF;
+    color: #000;
+    padding: 0 15px;
+    margin: 10px;
+  }
+
+  #chooseYourLocation {
+    color: #FFF;
+    margin: 0 0 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .locationMap {
+    width: 49%;
+    height: 90%;
+    border: solid #FFF 2px;
+    cursor: pointer;
+  }
+
+  .locationMap:hover {
+    border: solid red 2px;
+  }
+
+  #forestButton {
+    color: #FFF;
+    height: 35px;
+    width: 35px;
+    border: 3px solid #FFF;
+    position: relative;
+    cursor: pointer;
+    top: 200px;
+    left: 5px;
+    border-radius: 50%;
+  }
+  
+  .locationMap:hover > #forestButton {
+    background-color: red;
+  }
+
+  #volcanoButton {
+    color: #FFF;
+    height: 35px;
+    width: 35px;
+    border: 3px solid #FFF;
+    cursor: pointer;
+    position: relative;
+    top: 200px;
+    left: 5px;
+    border-radius: 50%;
+  }
+
+  .locationMap:hover > #volcanoButton {
+    background-color: red;
+  }
+  
+  .errors1 {
+    color: #Ff4b51;
+  }
+
+  .errors2 {
+    display: none;
+  }
+
+  alert {
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Customize the label (the container) */
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+/* Hide the browser's default radio button */
+.checkmark input {
+  position: absolute;
+  /* opacity: 0; */
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  cursor: pointer;
+  padding: 10px;
+  margin: auto 10px;
+  font-size: 16px;
+  border: solid #FFF 1px;
+  background-color: salmon;
+}
+
+/* When the radio button is checked, add a blue background */
+.checkmark input :checked {
+  background-color: blue;
+}
+
+/* label,
+  input[type='submit']  */
+
+
+
+
+
+
+
+
+
+
+
+/* #chosenCharacter {
+  height: 200px;
+  width: 200px;
+  color: #FFF;
+  text-align: center;
+  border: 3px solid #FFF;
+  display: block;
+  margin: auto;
+} */
+
+
+/* #chooseAdventureButton {
+  color: #FFF;
+  background-color: #000;
+  border: 3px solid #FFF;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 300px;
+  margin-top: 10px;
+  cursor: pointer;
+} */
+
+/* .chooseYourAvatarLabel {
+  width: 200px;
+  color: #FFF;
+  float: left;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: large;
+} */
+
+/* .chooseYourItemImg {
+  height: 60px;
+  width: 60px;
+  color: #FFF;
+  margin: auto;
+  float: left;
+} */
+
+/* .chooseYourItemLabel {
+  color: #FFF;
+  margin: auto;
+  font-size: small;
+} */
+
+/* .adventureChoices {
+  height: 70%;
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
+} */
+
+/* .choiceButton:hover {
+  color: #000;
+  background-color: #FFF;
+} */
+
+#blankBar {
+  background-color: black;
+  height: 5px;
+  margin-bottom: 30px;
+}
+
+#healthBar {
+  background-color: red;
+  height: 5px;
+  margin-bottom: 30px;
+}
+
+#strengthBar {
+  background-color: orange;
+  height: 5px;
+  margin-bottom: 30px;
+}
+
+#defenseBar {
+  background-color: green;
+  height: 5px;
+  margin-bottom: 30px;
+}
+
+#luckBar {
+  background-color: yellow;
+  height: 5px;
+  margin-bottom: 30px;
+}
+
+.itemList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 30px;
+}
+
+.itemImg {
+  max-width: 30px;
+  max-height: 30px;
+  padding-left: 8px;
+}
+
+/* .itemInfoImg {
+  width: 120px;
+  height: 120px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+} */
 
-.App-link {
-  color: #61dafb;
-}
+/* .sidebarInfo {
+  margin-left: 15%;
+  margin-right: 50px;
+} */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* .itemInfoArrow {
+  text-align: left;
+  font-size: 40px;
+  margin: 0 auto;
+  cursor: pointer;
+} */
+
+/* .itemInfoButton {
+  color: #FFF;
+  background-color: #000;
+  border: 2px solid #FFF;
+  padding: 10px 5px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 80px;
+  cursor: pointer;
+} */
+
+/* .itemInfoButton:hover {
+  color: #000;
+  background-color: #FFF;
+} */
+
