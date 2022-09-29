@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :events
   resources :items
   resources :locations
   resources :options
