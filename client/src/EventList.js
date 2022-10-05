@@ -1,10 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
-import Event from "./Event";
+import React, { useEffect, useState } from "react";
+// import Event from "./Event";
 
 function EventList({ goToIslandMap, location, onEventSelect }) {
   const [allEvents, setAllEvents] = useState(location.events)
   const [eventsOptions, setEventsOptions] = useState()
-  const [selectedEvent, setSelectedEvent] = useState()
+  // const [selectedEvent, setSelectedEvent] = useState()
 
   // const allEvents = useRef(location.events)
 

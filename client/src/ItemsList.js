@@ -14,7 +14,7 @@ function ItemsList({ item }) {
   return (
     <div className="itemList" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <p>{item.quantity} x </p>
-      <img className="itemImg" src={item.image}></img>
+      <img className="itemImg" src={item.image} alt="*item" ></img>
       <p style={{display: isVisible}}>{item.name}</p>
     </div>
   );

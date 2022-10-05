@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 function ChooseYourCharacter({ handleAvatarClick, handleNameChange, handleProfessionChange, handleCharacterConfirm, setCurrentPage, chooseYourProfession, archerAvatar, mageAvatar, warriorAvatar, blankAvatar, setCharacter, characterErrors }) {
   // const [chooseCharacterName, setChooseCharacterName] = useState('')
-  const [chooseCharacterAvatar, setChooseCharacterAvatar] = useState(blankAvatar)
-  const [characterError, setCharacterError] = useState('')
+  // const [chooseCharacterAvatar, setChooseCharacterAvatar] = useState(blankAvatar)
+  // const [characterError, setCharacterError] = useState('')
 
   const [localName, setLocalName] = useState('')
   const [localAvatar, setLocalAvatar] = useState(blankAvatar)
@@ -72,13 +72,13 @@ function ChooseYourCharacter({ handleAvatarClick, handleNameChange, handleProfes
             <h3>CHOOSE YOUR AVATAR</h3>
           <div className="center">
             <div className="chooseYourAvatarContainer">
-              <img className="chooseYourAvatarImg" onClick={e => onAvatarClick(e)} src={warriorAvatar}></img>
+              <img className="chooseYourAvatarImg" onClick={e => onAvatarClick(e)} src={warriorAvatar} alt="*warrior"></img>
             </div>
             <div className="chooseYourAvatarContainer">
-              <img className="chooseYourAvatarImg" onClick={e => onAvatarClick(e)} src={archerAvatar}></img>
+              <img className="chooseYourAvatarImg" onClick={e => onAvatarClick(e)} src={archerAvatar} alt="*archer"></img>
             </div>
             <div className="chooseYourAvatarContainer">
-              <img className="chooseYourAvatarImg" onClick={e => onAvatarClick(e)} src={mageAvatar}></img>
+              <img className="chooseYourAvatarImg" onClick={e => onAvatarClick(e)} src={mageAvatar} alt="*mage"></img>
             </div>
           </div>
           <br></br>

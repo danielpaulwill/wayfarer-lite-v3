@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function CharacterSidebar({ character, avatar, name, health, evil, strength, defense, luck }) {
 
   return (
     <div id="characterSidebar">
       <h2 style={name === "" ? {color: "black"} : {color: "white"}}>{name}</h2>
-      <img src={avatar} referrerPolicy="no-referrer"></img>
+      <img src={avatar} alt="*characters avatar" referrerPolicy="no-referrer"></img>
       <div id="sidebarStats">
         <h3>Stats</h3>
         <p>Health: {health}</p>

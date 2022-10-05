@@ -15,7 +15,7 @@ function MainContainer({ user, handleMapView, setErrors }) {
   const warriorAvatar = require("./assets/characters/warrior.png")
 
   const [characterName, setCharacterName] = useState('')
-  const [characterAvatar, setCharacterAvatar] = useState('')
+  const [characterAvatar, setCharacterAvatar] = useState(blankAvatar)
   const [chosenProfession, setChosenProfession] = useState('')
 
   const [setupWorkaround, setSetupWorkaround] = useState('')
@@ -42,7 +42,8 @@ function MainContainer({ user, handleMapView, setErrors }) {
             setStrength(data.character.strength)
             setDefense(data.character.defense)
             setLuck(data.character.luck)
-          }});
+          }
+        });
       } else {
         res.json().then((err) => setCharacterErrors(err.errors))
       }});

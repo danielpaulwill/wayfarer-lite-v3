@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
 import ChooseYourLocation from "./ChooseYourLocation";
 import EventList from "./EventList";
-import LoadingPage from "./LoadingPage";
 import Event from "./Event";
 import OptionResult from "./OptionResult";
 
 function GameContainer() {
   
   const [location, setLocation] = useState()
-  const [selectedLocation, setSelectedLocation] = useState('')
+  // const [selectedLocation, setSelectedLocation] = useState('')
 
   const eventList = <EventList location={location} onEventSelect={handleEventSelect} goToIslandMap={goToIslandMap} />
   const chooseYourLocation = <ChooseYourLocation onLocationSelect={handleLocationSelect} />

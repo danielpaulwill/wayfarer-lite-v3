@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import ItemsList from "./ItemsList";
 
 function ItemsSidebar() {
   // const blankAvatar = require("./assets/characters/blank.png")
 
-  const [currentItems, setCurrentItems] = useState([
+  const currentItems = ([
     {
       name: "Axe",
       quantity: 1,
