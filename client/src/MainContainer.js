@@ -30,16 +30,19 @@ function MainContainer({ user, handleMapView, setErrors }) {
     useEffect(() => {
       fetch("/me").then((res) => {
         if (res.ok) {
-        res.json().then((user) => {
-          setCharacter(user.character)
-          setCharacterName(user.character.name)
-          setCharacterAvatar(user.character.avatar)
-          setHealth(user.character.health)
-          setEvil(user.character.evil)
-          setStrength(user.character.strength)
-          setDefense(user.character.defense)
-          setLuck(user.character.luck)
-        });
+        res.json().then((data) => {
+          if (data.character === undefined) {
+            console.log("No character")
+          } else {
+            setCharacter(data.character)
+            setCharacterName(data.character.name)
+            setCharacterAvatar(data.character.avatar)
+            setHealth(data.character.health)
+            setEvil(data.character.evil)
+            setStrength(data.character.strength)
+            setDefense(data.character.defense)
+            setLuck(data.character.luck)
+          }});
       } else {
         res.json().then((err) => setCharacterErrors(err.errors))
       }});
