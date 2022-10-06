@@ -25,6 +25,7 @@ function App() {
         setUser(user)
       });
       navigate('/game/play')
+      // navigate('/game/setup')
       alert("Welcome back to Wayfarer! Please select a location to pick up where you left off");
     } else {
       res.json().then((err) => setErrors(err.errors))
