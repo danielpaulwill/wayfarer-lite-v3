@@ -9,26 +9,26 @@ function ItemsSidebar() {
       name: "Axe",
       quantity: 1,
       category: "weapon",
-      image: require("./assets/items/axe.png")
+      image: "https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/Items/axe.png"
     },
     {
       name: "Potion",
       quantity: 3,
       category: "item",
       description: "Potions are a one-use item. Some potions can heal your health, others can replenish your magic. Some have lasting effects, others have momentary boosts to your stats.",
-      image: require("./assets/items/potion.png")
+      image: "https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/Items/potion.png"
     },
     {
       name: "Treasure",
       quantity: 1,
       category: "item",
-      image: require("./assets/items/treasure.png")
+      image: "https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/Items/treasure.png"
     },
     {
       name: "Helmet",
       quantity: 1,
       category: "armor",
-      image: require("./assets/items/helmet.png")
+      image: "https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/Items/Helmet.png"
     }
   ]);
 
