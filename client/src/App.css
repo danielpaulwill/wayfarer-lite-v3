@@ -236,14 +236,29 @@
     flex-flow: row wrap;
   }
 
-  .locationMap {
+  #forestMap {
     width: 49%;
     height: 90%;
     border: solid #FFF 2px;
     cursor: pointer;
+    background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/forest-map.jpg");
+    background-size: 100%;
   }
 
-  .locationMap:hover {
+  #forestMap:hover {
+    border: solid red 2px;
+  }
+
+  #volcanoMap {
+    width: 49%;
+    height: 90%;
+    border: solid #FFF 2px;
+    cursor: pointer;
+    background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/volcano-map.jpg");
+    background-size: 100%;
+  }
+
+  #volcanoMap:hover {
     border: solid red 2px;
   }
 
@@ -259,7 +274,7 @@
     border-radius: 50%;
   }
   
-  .locationMap:hover > #forestButton {
+  #forestMap:hover > #forestButton {
     background-color: red;
   }
 
@@ -275,7 +290,7 @@
     border-radius: 50%;
   }
 
-  .locationMap:hover > #volcanoButton {
+  #volcanoMap:hover > #volcanoButton {
     background-color: red;
   }
   

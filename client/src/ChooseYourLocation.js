@@ -5,15 +5,14 @@ function ChooseYourLocation({ onLocationSelect }) {
  
   return (
     <div id="chooseYourLocation">
-      <div className="locationMap">
+      <div id="forestMap">
         <h3>Forest</h3>
         <button id="forestButton" value="Forest" onClick={onLocationSelect}></button>
       </div>
-      <div className="locationMap">
+      <div id="volcanoMap">
         <h3>Volcano</h3>
         <button id="volcanoButton" value="Volcano" onClick={onLocationSelect}></button>
       </div>
-
     </div>
   )
 };
