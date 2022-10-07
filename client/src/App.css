@@ -174,7 +174,6 @@
 
 .gameArea {
   color: #FFF;
-  margin: 0 0 0 auto;
   width: 56%;
   padding: 10px 1.85vw;
   text-align: center;
@@ -336,10 +335,19 @@
     display: none;
   }
 
-  alert {
-
+  .eventImg {
+    /* height: 200px; */
+    width: 100%;
+    background-color: red;
+    position: relative;
   }
 
+  .eventImgCont {
+    /* height: 200px;
+    width: 100%; */
+    height: 50%;
+    background-color: blue;
+  }
 
 
 

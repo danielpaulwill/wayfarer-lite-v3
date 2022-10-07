@@ -42,6 +42,9 @@ function EventList({ goToIslandMap, location, onEventSelect }) {
         <button className="normalButton" onClick={goToIslandMap}>Back to Island Map</button>
       </div>
       <div>
+        <div className="eventImgCont">
+          <img className="eventImg" src="https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/volcano-event.jpeg"></img>
+        </div>
         <h1>{location.name}</h1>
         <p>{location.description}</p>
         <br></br>
