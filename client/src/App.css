@@ -293,6 +293,10 @@
   #volcanoMap:hover > #volcanoButton {
     background-color: red;
   }
+
+  .locationHeader {
+    background: rgba(255, 255, 255, 0)
+  }
   
   .errors1 {
     color: #Ff4b51;

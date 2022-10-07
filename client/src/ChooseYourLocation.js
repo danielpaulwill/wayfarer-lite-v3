@@ -6,7 +6,7 @@ function ChooseYourLocation({ onLocationSelect }) {
   return (
     <div id="chooseYourLocation">
       <div id="forestMap">
-        <h3>Forest</h3>
+        <h3 className="locationHeader">Forest</h3>
         <button id="forestButton" value="Forest" onClick={onLocationSelect}></button>
       </div>
       <div id="volcanoMap">
