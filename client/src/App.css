@@ -27,6 +27,10 @@
   cursor: pointer;
 }
 
+#logo {
+
+}
+
 #welcome {
   color: rgb(255, 255, 255);
   margin: auto auto;
@@ -51,6 +55,26 @@
 
 #welcomeLuck {
   border: solid yellow 3px;
+}
+
+#noButton {
+  display: none;
+}
+
+#yesButton {
+  display: block;
+}
+
+#invertedButton {
+  color: #000;
+  background-color: #FFF;
+  border: 3px solid #C1C1C1;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 300px;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  cursor: pointer;
 }
 
 #welcomeButton {
