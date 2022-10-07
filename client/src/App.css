@@ -242,7 +242,8 @@
     border: solid #FFF 2px;
     cursor: pointer;
     background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/forest-map.jpg");
-    background-size: 100%;
+    background-size: cover;
+    background-position: right;
   }
 
   #forestMap:hover {
@@ -255,7 +256,8 @@
     border: solid #FFF 2px;
     cursor: pointer;
     background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/volcano-map.jpg");
-    background-size: 100%;
+    background-size: cover;
+    background-position: left;
   }
 
   #volcanoMap:hover {
@@ -269,7 +271,7 @@
     border: 3px solid #FFF;
     position: relative;
     cursor: pointer;
-    top: 200px;
+    top: -25px;
     left: 5px;
     border-radius: 50%;
   }
@@ -285,7 +287,7 @@
     border: 3px solid #FFF;
     cursor: pointer;
     position: relative;
-    top: 200px;
+    top: -25px;
     left: 5px;
     border-radius: 50%;
   }
@@ -295,7 +297,11 @@
   }
 
   .locationHeader {
-    background: rgba(255, 255, 255, 0)
+    background: rgba(255, 255, 255, 0);
+    color: #FFF;
+    font-size: x-large;
+    position: relative;
+    top: -230px;
   }
   
   .errors1 {
@@ -465,6 +471,7 @@
   flex-direction: row;
   align-items: center;
   height: 30px;
+  cursor: pointer;
 }
 
 .itemImg {
