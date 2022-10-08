@@ -4,13 +4,28 @@ import React, { useEffect, useState } from "react";
 function EventList({ goToIslandMap, location, onEventSelect }) {
   const [allEvents, setAllEvents] = useState(location.events)
   const [eventsOptions, setEventsOptions] = useState()
-  // const [selectedEvent, setSelectedEvent] = useState()
+  const [locationMusic, setLocationMusic] = useState('')
 
-  // const allEvents = useRef(location.events)
+  const forestMusic = new Audio('https://audio.jukehost.co.uk/zkdzbDdAe5rkArhejjAsycueuONMzk4L')
 
+  // Set events and set music
   useEffect(() => {
     setAllEvents(location.events)
+    if (location.name === 'Volcano') {
+      // play the volcano music
+    } else if (location.name === 'Forest') {
+      setLocationMusic(forestMusic)
+    }
   }, [])
+
+  // Play music
+  useEffect(() => {
+    if (locationMusic === '') {
+
+    } else {
+      locationMusic.play()
+    }
+  }, [locationMusic])
 
   // Create a button for each event
   useEffect(() => {
