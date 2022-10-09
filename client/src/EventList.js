@@ -21,7 +21,8 @@ function EventList({ goToIslandMap, location, onEventSelect }) {
   // Play music
   useEffect(() => {
     if (locationMusic === '') {
-
+      console.log('No Music')
+    } else if (!locationMusic.paused) {
     } else {
       locationMusic.play()
     }
@@ -51,10 +52,19 @@ function EventList({ goToIslandMap, location, onEventSelect }) {
       onEventSelect(event)
     }
 
+  // Return to Map page & pause music
+  function backToMap() {
+    if (locationMusic === '') {
+    } else {
+      locationMusic.pause()
+    }
+    goToIslandMap()
+  }
+
   return (
     <div>
       <div className="center">
-        <button className="normalButton" onClick={goToIslandMap}>Back to Island Map</button>
+        <button className="normalButton" onClick={backToMap}>Back to Island Map</button>
       </div>
       <div>
         <img className="eventImg" src="https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/volcano-event-cropped.jpg"></img>
