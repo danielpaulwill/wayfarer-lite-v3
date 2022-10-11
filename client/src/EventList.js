@@ -4,29 +4,34 @@ import React, { useEffect, useState } from "react";
 function EventList({ goToIslandMap, location, onEventSelect }) {
   const [allEvents, setAllEvents] = useState(location.events)
   const [eventsOptions, setEventsOptions] = useState()
-  const [locationMusic, setLocationMusic] = useState('')
+  // const [locationMusic, setLocationMusic] = useState('')
 
-  const forestMusic = new Audio('https://audio.jukehost.co.uk/zkdzbDdAe5rkArhejjAsycueuONMzk4L')
+  // const forestMusic = new Audio('https://audio.jukehost.co.uk/zkdzbDdAe5rkArhejjAsycueuONMzk4L')
+  // const volcanoMusic = new Audio('https://audio.jukehost.co.uk/neGxVnheYUJCE1I8Y8Qtjuyo2XNWxoHX')
+
 
   // Set events and set music
-  useEffect(() => {
-    setAllEvents(location.events)
-    if (location.name === 'Volcano') {
-      // play the volcano music
-    } else if (location.name === 'Forest') {
-      setLocationMusic(forestMusic)
-    }
-  }, [])
+  // useEffect(() => {
+  //   setAllEvents(location.events)
+  //   if (location.name === 'Volcano') {
+  //     setLocationMusic(volcanoMusic)
+  //   } else if (location.name === 'Forest') {
+  //     setLocationMusic(forestMusic)
+  //   }
+  // }, [])
+
 
   // Play music
-  useEffect(() => {
-    if (locationMusic === '') {
-      console.log('No Music')
-    } else if (!locationMusic.paused) {
-    } else {
-      locationMusic.play()
-    }
-  }, [locationMusic])
+  // useEffect(() => {
+  //   if (locationMusic === '') {
+  //     console.log('No Music')
+  //   } else if (!locationMusic.paused) {
+  //     console.log('Already playing')
+  //   } else {
+  //     locationMusic.play()
+  //   }
+  // }, [locationMusic])
+
 
   // Create a button for each event
   useEffect(() => {
@@ -52,22 +57,21 @@ function EventList({ goToIslandMap, location, onEventSelect }) {
       onEventSelect(event)
     }
 
+
   // Return to Map page & pause music
-  function backToMap() {
-    if (locationMusic === '') {
-    } else {
-      locationMusic.pause()
-    }
-    goToIslandMap()
-  }
+  // function backToMap() {
+  //   locationMusic.pause()
+  //   goToIslandMap()
+  // }
+
 
   return (
     <div>
       <div className="center">
-        <button className="normalButton" onClick={backToMap}>Back to Island Map</button>
+        <button className="normalButton" onClick={goToIslandMap}>Back to Island Map</button>
       </div>
       <div>
-        <img className="eventImg" src="https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/volcano-event-cropped.jpg"></img>
+        {/* <img className="eventImg" src="https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/volcano-event-cropped.jpg"></img> */}
         <h1>{location.name}</h1>
         <p>{location.description}</p>
         <br></br>
