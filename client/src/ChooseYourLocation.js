@@ -11,8 +11,9 @@ function ChooseYourLocation({ onLocationSelect }) {
       <button id="volcanoMap" value="Volcano" onClick={onLocationSelect}>
         <h2 className="locationHeader">Volcano</h2>
         <button className="locationButton" value="Volcano" onClick={onLocationSelect}></button>
+        {/* <div className="locationButton"></div> */}
       </button>
-      <button id="beachMap" value="Beach" onClick={onLocationSelect}>
+      <button id="beachMap" value="Forest" onClick={onLocationSelect}>
         <h2 className="locationHeader">Beach</h2>
         <button className="locationButton" value="Forest" onClick={onLocationSelect}></button>
       </button>

@@ -63,7 +63,6 @@ Once the official game launches, there will be a help page where support tickets
 - Digital dice roll to determine action achievement
 - Grey out location after all events from that location have been played
 - Create password reset functionality
-<p>&nbsp;</p>
 
 ##### Bug Fixes & Tweaks
 - Add Location image to the location database: parse that image onto the event list page

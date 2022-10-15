@@ -276,7 +276,7 @@
   height: 50%;
   border: solid #FFF 2px;
   cursor: pointer;
-  background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/forest-map.jpg");
+  background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-forest.jpg");
   background-size: cover;
   background-position: right;
 }
@@ -290,7 +290,7 @@
   height: 50%;
   border: solid #FFF 2px;
   cursor: pointer;
-  background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/volcano-map.jpg");
+  background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-volcano.jpg");
   background-size: cover;
   background-position: left;
 }
@@ -316,7 +316,7 @@
   height: 50%;
   border: solid #FFF 2px;
   cursor: pointer;
-  background-image: url("https://media.architecturaldigest.com/photos/5af4aed7da68792ef45e50a4/master/w_3865,h_2576,c_limit/16%20Nacpan.jpg");
+  background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-beach.jpg");
   background-size: cover;
   background-position: right;
 }
@@ -330,7 +330,7 @@
   height: 50%;
   border: solid #FFF 2px;
   cursor: pointer;
-  background-image: url("https://st2.depositphotos.com/2559597/9213/i/600/depositphotos_92132706-stock-photo-ta-prohm-temple.jpg");
+  background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-ruins.jpg");
   background-size: cover;
   background-position: right;
 }
