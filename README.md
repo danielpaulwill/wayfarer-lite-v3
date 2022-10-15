@@ -31,7 +31,10 @@ The final step once setup is complete is to run the app. If running locally run 
 ```
 rails s
 ```
-Then navigate to http://localhost:3000/
+```
+npm start --prefix client
+```
+Then navigate to http://localhost:4000/
 <p>&nbsp;</p>
 
 
@@ -58,6 +61,15 @@ Once the official game launches, there will be a help page where support tickets
 - 4 character options, replacing all three current options
 - Music for each location, scene, or event
 - Digital dice roll to determine action achievement
+- Grey out location after all events from that location have been played
+- Create password reset functionality
+<p>&nbsp;</p>
+
+##### Bug Fixes & Tweaks
+- Add Location image to the location database: parse that image onto the event list page
+- For each locations music, check to see if other music is currently playing and stop that music before playing other music
+- Include a clear note on the login screen to remember your username and password. The game is still in development and currently can not reset passwords.
+- Include note before landing page to turn speakers on for ideal game experience
 <p>&nbsp;</p>
 
 
@@ -73,4 +85,4 @@ None yet. But this project will include many partners.
 
 ### Project status
 ##### Currently in development.
-##### Active development has paused as of 9/8/22 and will resume 11/1/22
+##### Active development has paused as of 10/15/22 and will resume December 2022
