@@ -117,7 +117,7 @@ function MainContainer({ user, handleMapView, setErrors }) {
       <CharacterSidebar character={character} avatar={characterAvatar} name={characterName} health={health} evil={evil} strength={strength} defense={defense} luck={luck} />
       <Routes>
         <Route path="setup" element={<SetupContainer user={user} handleNameChange={handleNameChange} handleAvatarClick={handleAvatarClick} handleProfessionChange={handleProfessionChange} handleCharacterConfirm={handleCharacterConfirm} handleMapView={handleMapView} characterAvatar={characterAvatar} setErrors={setErrors} archerAvatar={archerAvatar} mageAvatar={mageAvatar} warriorAvatar={warriorAvatar} /*health={health} evil={evil} strength={strength} defense={defense} luck={luck} setCharacterAttributes={handleCharacterAttributes}*/ setupWorkaround={setupWorkaround} characterErrors={characterErrors} />} />
-        <Route path='play' element={<GameContainer character={character} /*characterName={characterName} characterAvatar={characterAvatar}*/ />} />
+        <Route path='play' element={<GameContainer character={character} />} />
       </Routes>
       <ItemsSidebar />
     </div>

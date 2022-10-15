@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 function ChooseYourCharacter({ handleAvatarClick, handleNameChange, handleProfessionChange, handleCharacterConfirm, setCurrentPage, chooseYourProfession, archerAvatar, mageAvatar, warriorAvatar, blankAvatar, setCharacter, characterErrors }) {
-  // const [chooseCharacterName, setChooseCharacterName] = useState('')
-  // const [chooseCharacterAvatar, setChooseCharacterAvatar] = useState(blankAvatar)
-  // const [characterError, setCharacterError] = useState('')
+  const [fireSelect, setFireSelect] = useState(false)
+  const [lawyerSelect, setLawyerSelect] = useState(false)
+  const [engineerSelect, setEngineerSelect] = useState(false)
 
   const [localName, setLocalName] = useState('')
   const [localAvatar, setLocalAvatar] = useState(blankAvatar)
@@ -49,13 +49,44 @@ function ChooseYourCharacter({ handleAvatarClick, handleNameChange, handleProfes
     handleAvatarClick(e)
   }
 
-  function onProfessionChange(e) {
-    setLocalProfession(e.target.value)
-    handleProfessionChange(e)
-  }
-
   function onCharacterConfirm() {
     handleCharacterConfirm(localName, localAvatar, localHealth, localEvil, localStrength, localDefense, localLuck)
+  }
+
+  function handleFirefighter(e) {
+    setLocalProfession(e.target.value)
+    handleProfessionChange(e)
+    if (lawyerSelect === true) {
+      setLawyerSelect(false)
+    }
+    if (engineerSelect === true) {
+      setEngineerSelect(false)
+}
+    setFireSelect(fireSelect => !fireSelect)
+  }
+
+  function handleLawyer(e) {
+    setLocalProfession(e.target.value)
+    handleProfessionChange(e)
+    if (fireSelect === true) {
+      setFireSelect(false)
+    }
+    if (engineerSelect === true) {
+      setEngineerSelect(false)
+    }
+    setLawyerSelect(lawyerSelect => !lawyerSelect)
+  }
+
+  function handleEngineer(e) {
+    setLocalProfession(e.target.value)
+    handleProfessionChange(e)
+    if (fireSelect === true) {
+      setFireSelect(false)
+    }
+    if (lawyerSelect === true) {
+      setLawyerSelect(false)
+    }
+    setEngineerSelect(engineerSelect => !engineerSelect)
   }
 
   return (
@@ -83,17 +114,11 @@ function ChooseYourCharacter({ handleAvatarClick, handleNameChange, handleProfes
           </div>
           <br></br>
           <h3>CHOOSE YOUR PROFESSION</h3>
-            <form className="container" onChange={e => onProfessionChange(e)}>
-              <label className="checkmark">Firefighter
-              <input type="radio" name="profession" value="Firefighter"></input>
-              </label>
-              <label className="checkmark">Lawyer
-              <input type="radio" name="profession" value="Lawyer"></input>
-              </label>
-              <label className="checkmark">Engineer
-              <input type="radio" name="profession" value="Engineer"></input>
-              </label>
-            </form>
+          <div className="container">
+            <button className={fireSelect ? 'selected' : 'checkmark'} value="Firefighter" onClick={handleFirefighter}>Firefighter</button>
+            <button className={lawyerSelect ? 'selected' : 'checkmark'} value="Lawyer" onClick={handleLawyer}>Lawyer</button>
+            <button className={engineerSelect ? 'selected' : 'checkmark'} value="Engineer" onClick={handleEngineer}>Engineer</button>
+          </div>
           <br></br>
           <br></br>
           <div className="center">

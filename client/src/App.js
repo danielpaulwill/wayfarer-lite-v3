@@ -66,10 +66,6 @@ function handleMapView() {
     navigate('/signup')
   }
 
-  // function handlePasswordConfirmationChange(e){
-  //   setPasswordConfirmation(e.target.value)
-  // }
-
   function handleSignupClick(signupUsername, signupPassword) {
     fetch('/users', {
       method: 'POST',

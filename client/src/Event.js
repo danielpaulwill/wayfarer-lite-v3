@@ -1,9 +1,10 @@
 import React from "react";
+import OptionSelect from "./OptionSelect";
 
-function Event({ event, onOptionSelect }) {
+function Event({ event, onOptionSelect, character }) {
 
   // console.log({ event.options })
-  let options = event.options.map((option) => (<button key={option.id} className="normalButton" onClick={e => onOptionSelect(option)} >{option.name}</button>))
+  let options = event.options.map((option) => <OptionSelect character={character} key={option.id} option={option} onOptionSelect={onOptionSelect} />)
   
   return (
     <div className="center">

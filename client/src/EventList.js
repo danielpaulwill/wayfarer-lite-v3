@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import Event from "./Event";
 
-function EventList({ goToIslandMap, location, onEventSelect }) {
+function EventList({ goToIslandMap, location, onEventSelect, character }) {
   const [allEvents, setAllEvents] = useState(location.events)
   const [eventsOptions, setEventsOptions] = useState()
   // const [locationMusic, setLocationMusic] = useState('')
