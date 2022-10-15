@@ -6,6 +6,7 @@ import Login from "./Login";
 import Signup from "./Signup";
 import Navbar from "./Navbar";
 import MainContainer from "./MainContainer";
+import HelpPage from "./HelpPage";
 
 function App() { 
   // window.onbeforeunload = function() { return "Your work will be lost."; };
@@ -25,7 +26,6 @@ function App() {
         setUser(user)
       });
       navigate('/game/play')
-      // navigate('/game/setup')
       alert("Welcome back to Wayfarer! Please select a location to pick up where you left off");
     } else {
       res.json().then((err) => setErrors(err.errors))
@@ -33,10 +33,10 @@ function App() {
     }});
   }, []);
 
-function handleMapView() {
-  navigate('game/play')
-  window.scrollTo(0, 0);
-}
+  function handleMapView() {
+    navigate('game/play')
+    window.scrollTo(0, 0);
+  }
 
   function handleWelcomeClick() {
     navigate('/signup')
@@ -103,13 +103,19 @@ function handleMapView() {
       }});
   }
 
+  function handleHelp() {
+    // console.log("clicked")
+    navigate('/help')
+  }
+
   return (
     <div>
-      <Navbar user={user} onLogin={handleSignupLoginClick} onLogout={handleLogout}/>
+      <Navbar user={user} onLogin={handleSignupLoginClick} onLogout={handleLogout} handleHelp={handleHelp} />
       <Routes>
         <Route path='welcome' element={<LandingPage handleClick={handleWelcomeClick}/>} />
         <Route path="signup" element={<Signup handleSignupClick={handleSignupClick} handleLoginClick={handleSignupLoginClick} errors={errors} />} />
         <Route path="login" element={<Login handleLoginClick={handleLoginClick} handleSignupClick={handleLoginSignupClick} setUser={setUser} errors={errors} />} />
+        <Route path='help' element={<HelpPage />} />
         <Route path="game/*" element={<MainContainer user={user} handleMapView={handleMapView} setErrors={setErrors} />} />
       </Routes>
     </div>
