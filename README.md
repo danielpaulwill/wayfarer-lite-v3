@@ -50,6 +50,8 @@ Once the official game launches, there will be a help page where support tickets
   - Bug ticket submission ability
   - List of future features
 - Add two more locations
+  - ~~On frontend~~
+  - On backend
 - Built out storyline
 - 3 different ending options
 - Item functionality
