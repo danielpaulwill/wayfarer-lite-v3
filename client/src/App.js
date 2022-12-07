@@ -9,10 +9,6 @@ import MainContainer from "./MainContainer";
 import HelpPage from "./HelpPage";
 
 function App() { 
-  // window.onbeforeunload = function() { return "Your work will be lost."; };
-  // const [username, setUsername] = useState('');
-  // const [password, setPassword] = useState('');
-  // const [passwordConfirmation, setPasswordConfirmation] = useState('');
   const [errors, setErrors] = useState('');
   const [user, setUser] = useState(null);
     
@@ -69,14 +65,12 @@ function App() {
   function handleSignupClick(signupUsername, signupPassword) {
     fetch('/users', {
       method: 'POST',
-      // mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         username: signupUsername,
         password: signupPassword,
-        // password_confirmation: passwordConfirmation,
       })})
       .then((res) => {
         if (res.ok) {
@@ -104,7 +98,6 @@ function App() {
   }
 
   function handleHelp() {
-    // console.log("clicked")
     navigate('/help')
   }
 
@@ -114,7 +107,7 @@ function App() {
       <Routes>
         <Route path='welcome' element={<LandingPage handleClick={handleWelcomeClick}/>} />
         <Route path="signup" element={<Signup handleSignupClick={handleSignupClick} handleLoginClick={handleSignupLoginClick} errors={errors} />} />
-        <Route path="login" element={<Login handleLoginClick={handleLoginClick} handleSignupClick={handleLoginSignupClick} setUser={setUser} errors={errors} />} />
+        <Route path="login" element={<Login handleLoginClick={handleLoginClick} handleSignupClick={handleLoginSignupClick} errors={errors} />} />
         <Route path='help' element={<HelpPage />} />
         <Route path="game/*" element={<MainContainer user={user} handleMapView={handleMapView} setErrors={setErrors} />} />
       </Routes>

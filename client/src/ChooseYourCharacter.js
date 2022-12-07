@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function ChooseYourCharacter({ handleAvatarClick, handleNameChange, handleProfessionChange, handleCharacterConfirm, setCurrentPage, chooseYourProfession, archerAvatar, mageAvatar, warriorAvatar, blankAvatar, setCharacter, characterErrors }) {
+function ChooseYourCharacter({ handleNameChange, handleAvatarClick, handleProfessionChange, handleCharacterConfirm, archerAvatar, mageAvatar, warriorAvatar, characterErrors, setCurrentPage, chooseYourProfession, blankAvatar }) {
   const [fireSelect, setFireSelect] = useState(false)
   const [lawyerSelect, setLawyerSelect] = useState(false)
   const [engineerSelect, setEngineerSelect] = useState(false)

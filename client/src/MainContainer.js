@@ -9,10 +9,6 @@ function MainContainer({ user, handleMapView, setErrors }) {
   const [character, setCharacter] = useState('');
   const [characterErrors, setCharacterErrors] = useState('')
 
-  // const blankAvatar = require("./assets/characters/blank.png")
-  // const archerAvatar = require("./assets/characters/archer.png")
-  // const mageAvatar = require("./assets/characters/mage.png")
-  // const warriorAvatar = require("./assets/characters/warrior.png")
   const blankAvatar = ("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/characters/blank.png")
   const archerAvatar = ("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/characters/archer.png")
   const mageAvatar = ("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/characters/mage.png")
@@ -114,9 +110,9 @@ function MainContainer({ user, handleMapView, setErrors }) {
 
   return (
     <div id="gameContainer">
-      <CharacterSidebar character={character} avatar={characterAvatar} name={characterName} health={health} evil={evil} strength={strength} defense={defense} luck={luck} />
+      <CharacterSidebar avatar={characterAvatar} name={characterName} health={health} evil={evil} strength={strength} defense={defense} luck={luck} />
       <Routes>
-        <Route path="setup" element={<SetupContainer user={user} handleNameChange={handleNameChange} handleAvatarClick={handleAvatarClick} handleProfessionChange={handleProfessionChange} handleCharacterConfirm={handleCharacterConfirm} handleMapView={handleMapView} characterAvatar={characterAvatar} setErrors={setErrors} archerAvatar={archerAvatar} mageAvatar={mageAvatar} warriorAvatar={warriorAvatar} /*health={health} evil={evil} strength={strength} defense={defense} luck={luck} setCharacterAttributes={handleCharacterAttributes}*/ setupWorkaround={setupWorkaround} characterErrors={characterErrors} />} />
+        <Route path="setup" element={<SetupContainer handleNameChange={handleNameChange} handleAvatarClick={handleAvatarClick} handleProfessionChange={handleProfessionChange} handleCharacterConfirm={handleCharacterConfirm} handleMapView={handleMapView} characterAvatar={characterAvatar} setErrors={setErrors} archerAvatar={archerAvatar} mageAvatar={mageAvatar} warriorAvatar={warriorAvatar} /*health={health} evil={evil} strength={strength} defense={defense} luck={luck} setCharacterAttributes={handleCharacterAttributes}*/ setupWorkaround={setupWorkaround} characterErrors={characterErrors} />} />
         <Route path='play' element={<GameContainer character={character} />} />
       </Routes>
       <ItemsSidebar />
