@@ -6,7 +6,7 @@ function OptionSelect({ option, onOptionSelect, character }) {
 
   return (
     <div>
-      <button className={restricted ? 'disabledButton' : 'normalButton'} onClick={e => onOptionSelect(option)}>{option.name} & {character.name}</button>
+      <button className={restricted ? 'disabledButton' : 'normalButton'} onClick={e => onOptionSelect(option)}>{option.name}</button>
     </div>
   )
 };
