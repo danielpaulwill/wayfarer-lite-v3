@@ -11,6 +11,10 @@ The game's current state is mainly structural. It has the structure and foundati
 ### Visuals
 
 ![welcome screen](https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/readme/welcome.png)
+
+![character selection](https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/readme/character_design.gif)
+
+![event action](https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/readme/event.gif)
 <p>&nbsp;</p>
 
 
