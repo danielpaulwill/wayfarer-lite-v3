@@ -24,7 +24,7 @@
       "location_id": "integer",
       "name": "string",
       "description": "string",
-      "is_complete": "boolean",
+      "is_complete": "boolean"
     }
   ],
   "items": [
@@ -32,7 +32,7 @@
       "character_id": "integer",
       "name": "string",
       "avatar": "string",
-      "quantity": "integer",
+      "quantity": "integer"
     }
   ],
   "options": [
@@ -42,14 +42,12 @@
       "description": "string",
       "is_complete": "boolean"
     }
+  ],
+  "users": [
+    {
+      "username": "string",
+      "password": "string",
+      "password_digest": "string"
+    }
   ]
 }
-
-
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "password"
-    t.string "password_digest"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
