@@ -1,0 +1,62 @@
+{
+  "locations": [
+    {
+      "name": "string",
+      "description": "string",
+      "is_complete": "boolean",
+      "character_id": "integer"
+    }
+  ],
+  ""
+}
+
+
+
+create_table "characters", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name"
+    t.string "avatar"
+    t.integer "health"
+    t.integer "evil"
+    t.integer "strength"
+    t.integer "defense"
+    t.integer "luck"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.integer "location_id"
+    t.string "name"
+    t.string "description"
+    t.boolean "is_complete"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.integer "character_id"
+    t.string "name"
+    t.string "avatar"
+    t.integer "quantity"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+
+  create_table "options", force: :cascade do |t|
+    t.integer "event_id"
+    t.string "name"
+    t.string "description"
+    t.boolean "is_complete"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username"
+    t.string "password"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
