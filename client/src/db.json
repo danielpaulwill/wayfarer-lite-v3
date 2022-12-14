@@ -28,19 +28,14 @@
     }
   ],
   "items": [
-    {}
+    {
+      "character_id": "integer",
+      "name": "string",
+      "avatar": "string",
+      "quantity": "integer",
+    }
   ]
 }
-
-
-  create_table "items", force: :cascade do |t|
-    t.integer "character_id"
-    t.string "name"
-    t.string "avatar"
-    t.integer "quantity"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
 
   create_table "options", force: :cascade do |t|
