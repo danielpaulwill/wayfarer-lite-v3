@@ -7,32 +7,31 @@
       "character_id": "integer"
     }
   ],
-  ""
+  "characters": [
+    {
+      "user_id": "integer",
+      "name": "string",
+      "avatar": "string",
+      "health": "integer",
+      "evil": "integer",
+      "strength": "integer",
+      "defense": "integer",
+      "luck": "integer"
+    }
+  ],
+  "events": [
+    {
+      "location_id": "integer",
+      "name": "string",
+      "description": "string",
+      "is_complete": "boolean",
+    }
+  ],
+  "items": [
+    {}
+  ]
 }
 
-
-
-create_table "characters", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "name"
-    t.string "avatar"
-    t.integer "health"
-    t.integer "evil"
-    t.integer "strength"
-    t.integer "defense"
-    t.integer "luck"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "events", force: :cascade do |t|
-    t.integer "location_id"
-    t.string "name"
-    t.string "description"
-    t.boolean "is_complete"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "items", force: :cascade do |t|
     t.integer "character_id"
