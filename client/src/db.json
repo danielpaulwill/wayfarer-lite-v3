@@ -51,3 +51,21 @@
     }
   ]
 }
+
+
+
+
+
+// EVENTS
+// forest = character.locations.find_by(name: "Forest")
+// volcano = character.locations.find_by(name: "Volcano")
+
+// f1 = Event.create(location_id: forest.id, name: "Event One", description: "The first Forest event.", is_complete: false)
+// f2 = Event.create(location_id: forest.id, name: "Event Two", description: "The second Forest event.", is_complete: false)
+// f3 = Event.create(location_id: forest.id, name: "Event Three", description: "The third Forest event.", is_complete: false)
+// f4 = Event.create(location_id: forest.id, name: "Event Four", description: "The fourth Forest event.", is_complete: false)
+
+// v1 = Event.create(location_id: volcano.id, name: "Event One", description: "The first Volcano event.", is_complete: false)
+// v2 = Event.create(location_id: volcano.id, name: "Event Two", description: "The second Volcano event.", is_complete: false)
+// v3 = Event.create(location_id: volcano.id, name: "Event Three", description: "The third Volcano event.", is_complete: false)
+// v4 = Event.create(location_id: volcano.id, name: "Event Four", description: "The fourth Volcano event.", is_complete: false)
