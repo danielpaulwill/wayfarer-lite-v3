@@ -91,4 +91,4 @@ None yet. But this project will include many partners.
 
 ### Project status
 ##### Currently in development.
-##### Active development has paused as of 10/15/22 and will resume December 2022
+<!-- ##### Active development has paused as of 10/15/22 and will resume December 2022 -->
