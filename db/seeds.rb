@@ -7,7 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
+# USER
+user = User.create(:username, :password, :password_digest)
 
 
 
@@ -21,7 +22,6 @@ Despite the dangers, the dark, thick forest is also a place of great beauty and 
 ", is_complete: false)
 volcano = Location.create(character_id: user.character.id, name: "Volcano", description: "A giant, smoking mountain lay before you. It feels warmer the closer you get to it.", is_complete: false)
 # byebug
-
 
 
 # EVENTS
