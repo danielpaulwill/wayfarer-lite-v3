@@ -53,7 +53,23 @@ v3o2 = Option.create(event_id: v3.id, name: "Option 2", description: "The second
 v4o1 = Option.create(event_id: v4.id, name: "Option 1", description: "The first option of the fourth Volcano event.", is_complete: false)
 v4o2 = Option.create(event_id: v4.id, name: "Option 2", description: "The second option of the fourth Volcano event.", is_complete: false)
 
+b1o1 = Option.create(event_id: b1.id, name: "Option 1", description: "The first option of the first Beach event.", is_complete: false)
+b1o2 = Option.create(event_id: b1.id, name: "Option 2", description: "The second option of the first Beach event.", is_complete: false)
+b2o1 = Option.create(event_id: b2.id, name: "Option 1", description: "The first option of the second Beach event.", is_complete: false)
+b2o2 = Option.create(event_id: b2.id, name: "Option 2", description: "The second option of the second Beach event.", is_complete: false)
+b3o1 = Option.create(event_id: b3.id, name: "Option 1", description: "The first option of the third Beach event.", is_complete: false)
+b3o2 = Option.create(event_id: b3.id, name: "Option 2", description: "The second option of the third Beach event.", is_complete: false)
+b4o1 = Option.create(event_id: b4.id, name: "Option 1", description: "The first option of the fourth Beach event.", is_complete: false)
+b4o2 = Option.create(event_id: b4.id, name: "Option 2", description: "The second option of the fourth Beach event.", is_complete: false)
 
+r1o1 = Option.create(event_id: r1.id, name: "Option 1", description: "The first option of the first Ruins event.", is_complete: false)
+r1o2 = Option.create(event_id: r1.id, name: "Option 2", description: "The second option of the first Ruins event.", is_complete: false)
+r2o1 = Option.create(event_id: r2.id, name: "Option 1", description: "The first option of the second Ruins event.", is_complete: false)
+r2o2 = Option.create(event_id: r2.id, name: "Option 2", description: "The second option of the second Ruins event.", is_complete: false)
+r3o1 = Option.create(event_id: r3.id, name: "Option 1", description: "The first option of the third Ruins event.", is_complete: false)
+r3o2 = Option.create(event_id: r3.id, name: "Option 2", description: "The second option of the third Ruins event.", is_complete: false)
+r4o1 = Option.create(event_id: r4.id, name: "Option 1", description: "The first option of the fourth Ruins event.", is_complete: false)
+r4o2 = Option.create(event_id: r4.id, name: "Option 2", description: "The second option of the fourth Ruins event.", is_complete: false)
 
 
 
