@@ -50,5 +50,10 @@ class OptionsController < ApplicationController
       render json: { errors: f1o1.errors.full_messages }, status: :unprocessable_entity
     end
   end
+
+  def index
+    options = Option.all
+    render json: options
+  end
   
 end

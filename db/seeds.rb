@@ -10,6 +10,8 @@ The trees in this forest are ancient and massive, with thick trunks and branches
 Despite the dangers, the dark, thick forest is also a place of great beauty and wonder. The vibrant green of the leaves, the sparkling streams, and the delicate wildflowers all contribute to its charm. It is a place of solitude and contemplation. Adventurers who are brave enough to venture into this forest may find hidden treasures, lost secrets, or most importantly, answers; but they must be prepared to face the dangers that lurk within its depths.
 ", is_complete: false)
 volcano = Location.create(character_id: character.id, name: "Volcano", description: "A giant, smoking mountain lay before you. It feels warmer the closer you get to it.", is_complete: false)
+beach = Location.create(character_id: character.id, name: "Beach", description: "It's a beach.", is_complete: false)
+ruins = Location.create(character_id: character.id, name: "Ruins", description: "There are ruins.", is_complete: false)
 
 # EVENTS
 f1 = Event.create(location_id: forest.id, name: "Event One", description: "The first Forest event.", is_complete: false)
