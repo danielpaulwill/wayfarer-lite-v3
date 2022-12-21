@@ -13,13 +13,13 @@ function ChooseYourLocation({ onLocationSelect }) {
         <button className="locationButton" value="Volcano" onClick={onLocationSelect}></button>
         {/* <div className="locationButton"></div> */}
       </button>
-      <button id="beachMap" value="Forest" onClick={onLocationSelect}>
+      <button id="beachMap" value="Beach" onClick={onLocationSelect}>
         <h2 className="locationHeader">Beach</h2>
-        <button className="locationButton" value="Forest" onClick={onLocationSelect}></button>
+        <button className="locationButton" value="Beach" onClick={onLocationSelect}></button>
       </button>
-      <button id="ruinsMap" value="Forest" onClick={onLocationSelect}>
+      <button id="ruinsMap" value="Ruins" onClick={onLocationSelect}>
         <h2 className="locationHeader">Ruins</h2>
-        <button className="locationButton" value="Forest" onClick={onLocationSelect}></button>
+        <button className="locationButton" value="Ruins" onClick={onLocationSelect}></button>
       </button>
     </div>
   )
