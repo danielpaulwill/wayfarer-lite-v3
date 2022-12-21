@@ -24,6 +24,16 @@ v2 = Event.create(location_id: volcano.id, name: "Event Two", description: "The 
 v3 = Event.create(location_id: volcano.id, name: "Event Three", description: "The third Volcano event.", is_complete: false)
 v4 = Event.create(location_id: volcano.id, name: "Event Four", description: "The fourth Volcano event.", is_complete: false)
 
+b1 = Event.create(location_id: beach.id, name: "Event One", description: "The first Beach event.", is_complete: false)
+b2 = Event.create(location_id: beach.id, name: "Event Two", description: "The second Beach event.", is_complete: false)
+b3 = Event.create(location_id: beach.id, name: "Event Three", description: "The third Beach event.", is_complete: false)
+b4 = Event.create(location_id: beach.id, name: "Event Four", description: "The fourth Beach event.", is_complete: false)
+
+r1 = Event.create(location_id: ruins.id, name: "Event One", description: "The first Ruins event.", is_complete: false)
+r2 = Event.create(location_id: ruins.id, name: "Event Two", description: "The second Ruins event.", is_complete: false)
+r3 = Event.create(location_id: ruins.id, name: "Event Three", description: "The third Ruins event.", is_complete: false)
+r4 = Event.create(location_id: ruins.id, name: "Event Four", description: "The fourth Ruins event.", is_complete: false)
+
 # OPTIONS
 f1o1 = Option.create(event_id: f1.id, name: "Option 1", description: "The first option of the first Forest event.", is_complete: false)
 f1o2 = Option.create(event_id: f1.id, name: "Option 2", description: "The second option of the first Forest event.", is_complete: false)
