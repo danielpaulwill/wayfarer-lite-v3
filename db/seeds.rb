@@ -1,5 +1,5 @@
 # USER
-user = User.create(username: "danielpaulw", password: "Test1", :password_digest)
+user = User.create(username: "danielpaulw", password: "Test1")
 
 # CHARACTER
 character = Character.create(name: "Ivan", avatar: "https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/characters/archer.png", health: 50, evil: 50, strength: 50, defense: 50, luck: 50, user_id: user.id)
@@ -22,7 +22,24 @@ v2 = Event.create(location_id: volcano.id, name: "Event Two", description: "The 
 v3 = Event.create(location_id: volcano.id, name: "Event Three", description: "The third Volcano event.", is_complete: false)
 v4 = Event.create(location_id: volcano.id, name: "Event Four", description: "The fourth Volcano event.", is_complete: false)
 
+# OPTIONS
+f1o1 = Option.create(event_id: f1.id, name: "Option 1", description: "The first option of the first Forest event.", is_complete: false)
+f1o2 = Option.create(event_id: f1.id, name: "Option 2", description: "The second option of the first Forest event.", is_complete: false)
+f2o1 = Option.create(event_id: f2.id, name: "Option 1", description: "The first option of the second Forest event.", is_complete: false)
+f2o2 = Option.create(event_id: f2.id, name: "Option 2", description: "The second option of the second Forest event.", is_complete: false)
+f3o1 = Option.create(event_id: f3.id, name: "Option 1", description: "The first option of the third Forest event.", is_complete: false)
+f3o2 = Option.create(event_id: f3.id, name: "Option 2", description: "The second option of the third Forest event.", is_complete: false)
+f4o1 = Option.create(event_id: f4.id, name: "Option 1", description: "The first option of the fourth Forest event.", is_complete: false)
+f4o2 = Option.create(event_id: f4.id, name: "Option 2", description: "The second option of the fourth Forest event.", is_complete: false)
 
+v1o1 = Option.create(event_id: v1.id, name: "Option 1", description: "The first option of the first Volcano event.", is_complete: false)
+v1o2 = Option.create(event_id: v1.id, name: "Option 2", description: "The second option of the first Volcano event.", is_complete: false)
+v2o1 = Option.create(event_id: v2.id, name: "Option 1", description: "The first option of the second Volcano event.", is_complete: false)
+v2o2 = Option.create(event_id: v2.id, name: "Option 2", description: "The second option of the second Volcano event.", is_complete: false)
+v3o1 = Option.create(event_id: v3.id, name: "Option 1", description: "The first option of the third Volcano event.", is_complete: false)
+v3o2 = Option.create(event_id: v3.id, name: "Option 2", description: "The second option of the third Volcano event.", is_complete: false)
+v4o1 = Option.create(event_id: v4.id, name: "Option 1", description: "The first option of the fourth Volcano event.", is_complete: false)
+v4o2 = Option.create(event_id: v4.id, name: "Option 2", description: "The second option of the fourth Volcano event.", is_complete: false)
 
 
 
