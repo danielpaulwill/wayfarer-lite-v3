@@ -34,11 +34,6 @@ r3 = Event.create(location_id: ruins.id, name: "Event Three", description: "The 
 r4 = Event.create(location_id: ruins.id, name: "Event Four", description: "The fourth Ruins event.", is_complete: false)
 
 # OPTIONS
-
-restriction_type
-restriction_value
-restriction_operation
-
 f1o1 = Option.create(event_id: f1.id, name: "Option 1", description: "The first option of the first Forest event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
 f1o2 = Option.create(event_id: f1.id, name: "Option 2", description: "The second option of the first Forest event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
 f2o1 = Option.create(event_id: f2.id, name: "Option 1", description: "The first option of the second Forest event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
