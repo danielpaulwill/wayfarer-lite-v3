@@ -64,6 +64,9 @@ function EventList({ goToIslandMap, location, onEventSelect, character }) {
   //   goToIslandMap()
   // }
 
+// Break description into multiple paragraphs
+  let paragraphs = location.description.split(';;')
+  let allParagraphs = paragraphs.map(paragraph => (<p>{paragraph}</p>))
 
   return (
     <div>
@@ -73,7 +76,7 @@ function EventList({ goToIslandMap, location, onEventSelect, character }) {
       <div>
         {/* <img className="eventImg" src="https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/volcano-event-cropped.jpg"></img> */}
         <h1>{location.name}</h1>
-        <p>{location.description}</p>
+        {allParagraphs}
         <br></br>
         {eventsOptions}
       </div>
