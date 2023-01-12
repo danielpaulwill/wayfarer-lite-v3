@@ -6,15 +6,15 @@ character = Character.create(name: "Ivan", avatar: "https://raw.githubuserconten
 
 # LOCATIONS
 forest = Location.create(character_id: character.id, name: "Forest", description: "You find yourself in a dark, thick forest. The tall trees block out most of the light and the underbrush is dense and tangled. The air is heavy with the smell of damp earth and decaying leaves, and the ground is covered in a thick layer of moss and fallen branches. The forest is alive with the sound of chirping birds and rustling leaves, but there are also other, more sinister noises - the snarl of a predator, the hiss of a venomous snake, the eerie wail of something up in the branches.
-The trees in this forest are ancient and massive, with thick trunks and branches that stretch high into the sky. The canopy is so dense that it is difficult to see more than a few feet ahead, creating a sense of unease and isolation.
+; The trees in this forest are ancient and massive, with thick trunks and branches that stretch high into the sky. The canopy is so dense that it is difficult to see more than a few feet ahead, creating a sense of unease and isolation.
 ", is_complete: false)
 volcano = Location.create(character_id: character.id, name: "Volcano", description: "A giant, smoking mountain lay before you. It feels warmer the closer you get to it.", is_complete: false)
 beach = Location.create(character_id: character.id, name: "Beach", description: "It's a beach.", is_complete: false)
 ruins = Location.create(character_id: character.id, name: "Ruins", description: "There are ruins.", is_complete: false)
 
 # EVENTS
-f1 = Event.create(location_id: forest.id, name: "Through the mist you see several cages with odd looking creatures in them.", description: "The first Forest event.", is_complete: false)
-f2 = Event.create(location_id: forest.id, name: "In the distance you hear someone calling out for help.", description: "The second Forest event.", is_complete: false)
+f1 = Event.create(location_id: forest.id, name: "Through the mist you see several cages with odd looking creatures in them.", description: "What will you do?", is_complete: false)
+f2 = Event.create(location_id: forest.id, name: "In the distance you hear someone calling out for help.", description: "What will you do?", is_complete: false)
 f3 = Event.create(location_id: forest.id, name: "Event Three", description: "The third Forest event.", is_complete: false)
 f4 = Event.create(location_id: forest.id, name: "Event Four", description: "The fourth Forest event.", is_complete: false)
 
@@ -34,8 +34,10 @@ r3 = Event.create(location_id: ruins.id, name: "Event Three", description: "The 
 r4 = Event.create(location_id: ruins.id, name: "Event Four", description: "The fourth Ruins event.", is_complete: false)
 
 # OPTIONS
-f1o1 = Option.create(event_id: f1.id, name: "Option 1", description: "The first option of the first Forest event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
-f1o2 = Option.create(event_id: f1.id, name: "Option 2", description: "The second option of the first Forest event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
+f1o1 = Option.create(event_id: f1.id, name: "Break the cages and release the animals", description: "The first option of the first Forest event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
+f1o2 = Option.create(event_id: f1.id, name: "Poke the animals with a stick", description: "The second option of the first Forest event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
+f1o3 = Option.create(event_id: f1.id, name: "Crush the animals skulls with your foot", description: "The third option of the first Forest event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
+
 f2o1 = Option.create(event_id: f2.id, name: "Option 1", description: "The first option of the second Forest event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
 f2o2 = Option.create(event_id: f2.id, name: "Option 2", description: "The second option of the second Forest event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
 f3o1 = Option.create(event_id: f3.id, name: "Option 1", description: "The first option of the third Forest event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
