@@ -78,6 +78,8 @@ function EventList({ goToIslandMap, location, onEventSelect, character }) {
         <h1>{location.name}</h1>
         {allParagraphs}
         <br></br>
+        <h3>As you explore the {location.name}, several different things come to your attention</h3>
+        <br></br>
         {eventsOptions}
       </div>
     </div>
