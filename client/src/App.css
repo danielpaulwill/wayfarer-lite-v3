@@ -570,6 +570,28 @@
   padding-left: 8px;
 }
 
+#null {
+  width: 49%;
+  height: 50%;
+  border: solid #FFF 2px;
+  cursor: not-allowed;
+  background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-forest.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+.nullButton {
+  color: #FFF;
+  height: 35px;
+  width: 35px;
+  border: 3px solid #FFF;
+  position: relative;
+  cursor: not-allowed;
+  top: -25px;
+  left: 5px;
+  border-radius: 50%;
+}
+
 /* .itemInfoImg {
   width: 120px;
   height: 120px;

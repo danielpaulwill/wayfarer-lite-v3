@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 
 function ChooseYourLocation({ onLocationSelect }) {
+  const [forestDone, setForestDone] = useState(true)
+
+  // for disabled location select, id="null" disabled
+  // for button, className="nullButton"
  
   return (
     <div id="chooseYourLocation">
-      <button id="forestMap" value="Forest" onClick={onLocationSelect}>
+      <button id={forestDone ? "null" : "forestMap"} value="Forest" onClick={onLocationSelect} disabled={forestDone} >
         <h2 className="locationHeader">Forest</h2>
-        <button className="locationButton" value="Forest" onClick={onLocationSelect}></button>
+        <button className={forestDone ? "nullButton" : "locationButton"} value="Forest" onClick={onLocationSelect} disabled={forestDone}></button>
       </button>
       <button id="volcanoMap" value="Volcano" onClick={onLocationSelect}>
         <h2 className="locationHeader">Volcano</h2>
