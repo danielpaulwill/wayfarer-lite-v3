@@ -3,14 +3,22 @@ import React, { useEffect, useState } from "react";
 function ChooseYourLocation({ onLocationSelect }) {
   const [forestDone, setForestDone] = useState(false)
   const [locationData, setLocationData] = useState('')
-
-  console.log({locationData})
+  const [forestData, setForestData] = useState('')
+  const [volcanoData, setVolcanoData] = useState('')
+  const [beachData, setBeachData] = useState('')
+  const [ruinsData, setRuinsData] = useState('')
 
   useEffect(() => {
     fetch('/locations')
     .then((res) => res.json())
     .then((data) => setLocationData(data));
   }, [])
+
+  useEffect(() => {
+    // if locationData {
+    //   locationData.map(location => console.log({location}))
+    // }
+  }, [locationData])
 
   
 
