@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function ChooseYourLocation({ onLocationSelect }) {
-  const [forestDone, setForestDone] = useState(true)
+  const [forestDone, setForestDone] = useState(false)
+  const [locationData, setLocationData] = useState('')
+
+  console.log({locationData})
+
+  useEffect(() => {
+    fetch('/locations')
+    .then((res) => res.json())
+    .then((data) => setLocationData(data));
+  }, [])
+
+  
 
   // for disabled location select, id="null" disabled
   // for button, className="nullButton"
