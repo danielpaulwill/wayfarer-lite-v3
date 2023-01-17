@@ -11,57 +11,90 @@ function ChooseYourLocation({ onLocationSelect }) {
   const [beachData, setBeachData] = useState('')
   const [ruinsData, setRuinsData] = useState('')
 
-  // console.log(forestData.events)
+  // useEffect(() => {
+  //   // let f = 0
+  //   // let v = 0
+  //   // let b = 0
+  //   // let r = 0
+  //   // if (forestData !== ''){
+  //   //   forestData.events.map(event => {
+  //   //     if (event.is_complete === true){
+  //   //       ++f
+  //   // }})}
+  //   // if (volcanoData !== ''){
+  //   //   volcanoData.events.map(event => {
+  //   //     if (event.is_complete === true){
+  //   //       ++v
+  //   // }})}
+  //   // if (beachData !== ''){
+  //   //   beachData.events.map(event => {
+  //   //     if (event.is_complete === true){
+  //   //       ++b
+  //   // }})}
+  //   // if (ruinsData !== ''){
+  //   //   ruinsData.events.map(event => {
+  //   //     if (event.is_complete === true){
+  //   //       ++r
+  //   // }})}
 
-  useEffect(() => {
-    let f = 0
-    let v = 0
-    let b = 0
-    let r = 0
-    forestData.events.map(event => {
-      if (event.is_complete === true){
-        ++f
-      }
-    })
-    console.log(f)
-  }, [ruinsData])
+  //   eventCompleteCheck()
 
-  useEffect(() => {
-    setForestDone(forestData.is_complete)
-    setVolcanoDone(volcanoData.is_complete)
-    setBeachDone(beachData.is_complete)
-    setRuinsDone(ruinsData.is_complete)
-  }, [ruinsData])
+    
+   
+  // }, [ruinsData])
+
+
+
+
+  // useEffect(() => {
+  //   setForestDone(forestData.is_complete)
+  //   setVolcanoDone(volcanoData.is_complete)
+  //   setBeachDone(beachData.is_complete)
+  //   setRuinsDone(ruinsData.is_complete)
+  // }, [ruinsData])
+
+
+
+
   
+  // fetch location data and set state
   useEffect(() => {
     fetch('/locations')
     .then((res) => res.json())
     .then((data) => setLocationData(data));
   }, [])
-
+  
+  // if locationData exists move on to event completeness verification
   useEffect(() => {
-    if (locationData === '') {
-      console.log('no location data')
-    } else {
+    if (locationData !== '') {
       locationData.map(location => {
-        if (location.name === 'Forest'){
-          setForestData(location)
-        } else if (location.name === 'Volcano'){
-          setVolcanoData(location)
-        } else if (location.name === 'Beach'){
-          setBeachData(location)
-        } else if (location.name === "Ruins"){
-          setRuinsData(location)
-        }
+        eventCompleteCheck(location)
       })
     }
   }, [locationData])
 
-  
+  // check if each event in a location is complete
+  function eventCompleteCheck(location) {
+    let i = 0
+    if (location !== ''){
+      location.events.map(event => {
+        if (event.is_complete === true){
+          ++i
+    }})}
+    if (i.length === 4){
+      updateLocationComplete(location)
+    }
+  }
 
+  // POST update to location
+  function updateLocationComplete() {
+    
+  }
+  
+  
   // for disabled location select, id="null" disabled
   // for button, className="nullButton"
- 
+  
   return (
     <div id="chooseYourLocation">
       <button id={forestDone ? "null" : "forestMap"} value="Forest" onClick={onLocationSelect} disabled={forestDone} >
