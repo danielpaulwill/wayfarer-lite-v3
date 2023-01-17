@@ -570,7 +570,7 @@
   padding-left: 8px;
 }
 
-#null {
+#forestNull {
   width: 49%;
   height: 50%;
   border: solid #FFF 2px;
@@ -578,6 +578,16 @@
   background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-forest.jpg");
   background-size: cover;
   background-position: right;
+}
+
+#volcanoNull {
+  width: 49%;
+  height: 50%;
+  border: solid #FFF 2px;
+  cursor: not-allowed;
+  background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-volcano.jpg");
+  background-size: cover;
+  background-position: left;
 }
 
 .nullButton {

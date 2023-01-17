@@ -57,10 +57,15 @@ function ChooseYourLocation({ onLocationSelect }) {
       })})
       .then((res) => res.json())
       .then((location) => {
-        // if 
-
-
-        console.log(location)
+        if (location.name === 'Forest'){
+          setForestDone(location.is_complete)
+        } else if (location.name === 'Volcano'){
+          setVolcanoDone(location.is_complete)
+        } else if (location.name === 'Beach'){
+          setBeachDone(location.is_complete)
+        } else if (location.name === 'Ruins'){
+          setRuinsDone(location.is_complete)
+        } 
       })
   }
   
@@ -69,21 +74,21 @@ function ChooseYourLocation({ onLocationSelect }) {
   
   return (
     <div id="chooseYourLocation">
-      <button id={forestDone ? "null" : "forestMap"} value="Forest" onClick={onLocationSelect} disabled={forestDone} >
+      <button id={forestDone ? "forestNull" : "forestMap"} value="Forest" onClick={onLocationSelect} disabled={forestDone} >
         <h2 className="locationHeader">Forest</h2>
         <button className={forestDone ? "nullButton" : "locationButton"} value="Forest" onClick={onLocationSelect} disabled={forestDone}></button>
       </button>
-      <button id="volcanoMap" value="Volcano" onClick={onLocationSelect}>
+      <button id={volcanoDone ? "volcanoNull" : "volcanoMap"} value="Volcano" onClick={onLocationSelect} disabled={volcanoDone}>
         <h2 className="locationHeader">Volcano</h2>
-        <button className="locationButton" value="Volcano" onClick={onLocationSelect}></button>
+        <button className={volcanoDone ? "nullButton" : "locationButton"} value="Volcano" onClick={onLocationSelect} disabled={volcanoDone}></button>
       </button>
-      <button id="beachMap" value="Beach" onClick={onLocationSelect}>
+      <button id={beachDone ? "null" : "forestMap"} value="Beach" onClick={onLocationSelect}>
         <h2 className="locationHeader">Beach</h2>
-        <button className="locationButton" value="Beach" onClick={onLocationSelect}></button>
+        <button className={beachDone ? "nullButton" : "locationButton"} value="Beach" onClick={onLocationSelect}></button>
       </button>
-      <button id="ruinsMap" value="Ruins" onClick={onLocationSelect}>
+      <button id={ruinsDone ? "null" : "forestMap"} value="Ruins" onClick={onLocationSelect}>
         <h2 className="locationHeader">Ruins</h2>
-        <button className="locationButton" value="Ruins" onClick={onLocationSelect}></button>
+        <button className={ruinsDone ? "nullButton" : "locationButton"} value="Ruins" onClick={onLocationSelect}></button>
       </button>
     </div>
   )
