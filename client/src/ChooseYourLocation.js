@@ -6,10 +6,6 @@ function ChooseYourLocation({ onLocationSelect }) {
   const [beachDone, setBeachDone] = useState(false)
   const [ruinsDone, setRuinsDone] = useState(false)
   const [locationData, setLocationData] = useState('')
-  const [forestData, setForestData] = useState('')
-  const [volcanoData, setVolcanoData] = useState('')
-  const [beachData, setBeachData] = useState('')
-  const [ruinsData, setRuinsData] = useState('')
 
   // useEffect(() => {
   //   setForestDone(forestData.is_complete)
@@ -44,18 +40,29 @@ function ChooseYourLocation({ onLocationSelect }) {
         if (event.is_complete === true){
           ++i
     }})}
-    // console.log({i})
-    if (i.length === 4){
-      console.log("i length is 4")
+    if (i === 4){
       updateLocationComplete(location)
     }
   }
 
   // POST update to location
   function updateLocationComplete(location) {
-    console.log("location should be done")
+    fetch(`/locations/${location.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        is_complete: true
+      })})
+      .then((res) => res.json())
+      .then((location) => {
+        // if 
+
+
+        console.log(location)
+      })
   }
-  
   
   // for disabled location select, id="null" disabled
   // for button, className="nullButton"

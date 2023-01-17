@@ -38,5 +38,15 @@ class LocationsController < ApplicationController
     location = Location.find_by(id: event.location_id)
     render json: location, except: [:created_at, :updated_at], include: [:events => { :include => :options }], status: :ok  
   end
+
+  def update
+    location = Location.find_by(id: params[:id])
+    if location
+      location.update(is_complete: params[:is_complete])
+      render json: location, status: :accepted
+    else
+      render json: { error: "Not updated" }, status: :unauthorized
+    end
+  end
   
 end
