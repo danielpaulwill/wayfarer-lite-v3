@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 function ChooseYourLocation({ onLocationSelect }) {
+  const [locationData, setLocationData] = useState('')
   const [forestDone, setForestDone] = useState(false)
   const [volcanoDone, setVolcanoDone] = useState(false)
   const [beachDone, setBeachDone] = useState(false)
   const [ruinsDone, setRuinsDone] = useState(false)
-  const [locationData, setLocationData] = useState('')
+  const [villageDone, setVillageDone] = useState(false)
 
   // useEffect(() => {
   //   setForestDone(forestData.is_complete)
@@ -86,9 +87,14 @@ function ChooseYourLocation({ onLocationSelect }) {
         <h2 className="locationHeader">Beach</h2>
         <button className={beachDone ? "nullButton" : "locationButton"} value="Beach" onClick={onLocationSelect} disabled={beachDone}></button>
       </button>
-      <button id={ruinsDone ? "null" : "ruinsMap"} value="Ruins" onClick={onLocationSelect}>
+      <button id={ruinsDone ? "ruinsNull" : "ruinsMap"} value="Ruins" onClick={onLocationSelect} disabled={ruinsDone}>
         <h2 className="locationHeader">Ruins</h2>
-        <button className={ruinsDone ? "nullButton" : "locationButton"} value="Ruins" onClick={onLocationSelect}></button>
+        <button className={ruinsDone ? "nullButton" : "locationButton"} value="Ruins" onClick={onLocationSelect} disabled={ruinsDone}></button>
+      </button>
+      
+      <button id={villageDone ? "villageNull" : "villageMap"} value="Village" onClick={onLocationSelect} disabled={villageDone}>
+        <h2 className="locationHeader">Village</h2>
+        <button className={villageDone ? "nullButton" : "locationButton"} value="Village" onClick={onLocationSelect} disabled={villageDone}></button>
       </button>
     </div>
   )

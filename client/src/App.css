@@ -363,6 +363,21 @@
   border: solid red 2px;
 }
 
+#villageMap {
+  width: 49%;
+  height: 50%;
+  border: solid #FFF 2px;
+  cursor: pointer;
+  background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-ruins.jpg");
+  background-size: cover;
+  background-position: right;
+  z-index: 9;
+}
+
+#villageMap:hover {
+  border: solid red 2px;
+}
+
 #forestMap:hover > .locationButton {
   background-color: red;
 }
@@ -376,6 +391,10 @@
 }
 
 #ruinsMap:hover > .locationButton {
+  background-color: red;
+}
+
+#villageMap:hover > .locationButton {
   background-color: red;
 }
 
@@ -573,7 +592,7 @@
 #forestNull {
   width: 49%;
   height: 50%;
-  border: solid #FFF 2px;
+  border: solid #909090 2px;
   cursor: not-allowed;
   background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-forest.jpg");
   background-size: cover;
@@ -583,7 +602,7 @@
 #volcanoNull {
   width: 49%;
   height: 50%;
-  border: solid #FFF 2px;
+  border: solid #909090 2px;
   cursor: not-allowed;
   background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-volcano.jpg");
   background-size: cover;
@@ -593,18 +612,38 @@
 #beachNull {
   width: 49%;
   height: 50%;
-  border: solid #FFF 2px;
+  border: solid #909090 2px;
   cursor: not-allowed;
   background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-beach.jpg");
   background-size: cover;
   background-position: right;
 }
 
+#ruinsNull {
+  width: 49%;
+  height: 50%;
+  border: solid #909090 2px;
+  cursor: not-allowed;
+  background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-ruins.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
+#villageNull {
+  width: 49%;
+  height: 50%;
+  border: solid #909090 2px;
+  cursor: not-allowed;
+  /* background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-ruins.jpg"); */
+  background-size: cover;
+  background-position: right;
+}
+
 .nullButton {
-  color: #FFF;
+  color: #909090;
   height: 35px;
   width: 35px;
-  border: 3px solid #FFF;
+  border: 3px solid #909090;
   position: relative;
   cursor: not-allowed;
   top: -25px;
