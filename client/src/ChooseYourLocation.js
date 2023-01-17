@@ -12,49 +12,11 @@ function ChooseYourLocation({ onLocationSelect }) {
   const [ruinsData, setRuinsData] = useState('')
 
   // useEffect(() => {
-  //   // let f = 0
-  //   // let v = 0
-  //   // let b = 0
-  //   // let r = 0
-  //   // if (forestData !== ''){
-  //   //   forestData.events.map(event => {
-  //   //     if (event.is_complete === true){
-  //   //       ++f
-  //   // }})}
-  //   // if (volcanoData !== ''){
-  //   //   volcanoData.events.map(event => {
-  //   //     if (event.is_complete === true){
-  //   //       ++v
-  //   // }})}
-  //   // if (beachData !== ''){
-  //   //   beachData.events.map(event => {
-  //   //     if (event.is_complete === true){
-  //   //       ++b
-  //   // }})}
-  //   // if (ruinsData !== ''){
-  //   //   ruinsData.events.map(event => {
-  //   //     if (event.is_complete === true){
-  //   //       ++r
-  //   // }})}
-
-  //   eventCompleteCheck()
-
-    
-   
-  // }, [ruinsData])
-
-
-
-
-  // useEffect(() => {
   //   setForestDone(forestData.is_complete)
   //   setVolcanoDone(volcanoData.is_complete)
   //   setBeachDone(beachData.is_complete)
   //   setRuinsDone(ruinsData.is_complete)
   // }, [ruinsData])
-
-
-
 
   
   // fetch location data and set state
@@ -75,20 +37,23 @@ function ChooseYourLocation({ onLocationSelect }) {
 
   // check if each event in a location is complete
   function eventCompleteCheck(location) {
+    console.log({location})
     let i = 0
     if (location !== ''){
       location.events.map(event => {
         if (event.is_complete === true){
           ++i
     }})}
+    // console.log({i})
     if (i.length === 4){
+      console.log("i length is 4")
       updateLocationComplete(location)
     }
   }
 
   // POST update to location
-  function updateLocationComplete() {
-    
+  function updateLocationComplete(location) {
+    console.log("location should be done")
   }
   
   
