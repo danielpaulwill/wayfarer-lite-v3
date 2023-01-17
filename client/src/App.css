@@ -590,6 +590,16 @@
   background-position: left;
 }
 
+#beachNull {
+  width: 49%;
+  height: 50%;
+  border: solid #FFF 2px;
+  cursor: not-allowed;
+  background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-beach.jpg");
+  background-size: cover;
+  background-position: right;
+}
+
 .nullButton {
   color: #FFF;
   height: 35px;

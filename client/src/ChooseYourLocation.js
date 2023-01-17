@@ -82,11 +82,11 @@ function ChooseYourLocation({ onLocationSelect }) {
         <h2 className="locationHeader">Volcano</h2>
         <button className={volcanoDone ? "nullButton" : "locationButton"} value="Volcano" onClick={onLocationSelect} disabled={volcanoDone}></button>
       </button>
-      <button id={beachDone ? "null" : "forestMap"} value="Beach" onClick={onLocationSelect}>
+      <button id={beachDone ? "beachNull" : "beachMap"} value="Beach" onClick={onLocationSelect} disabled={beachDone}>
         <h2 className="locationHeader">Beach</h2>
-        <button className={beachDone ? "nullButton" : "locationButton"} value="Beach" onClick={onLocationSelect}></button>
+        <button className={beachDone ? "nullButton" : "locationButton"} value="Beach" onClick={onLocationSelect} disabled={beachDone}></button>
       </button>
-      <button id={ruinsDone ? "null" : "forestMap"} value="Ruins" onClick={onLocationSelect}>
+      <button id={ruinsDone ? "null" : "ruinsMap"} value="Ruins" onClick={onLocationSelect}>
         <h2 className="locationHeader">Ruins</h2>
         <button className={ruinsDone ? "nullButton" : "locationButton"} value="Ruins" onClick={onLocationSelect}></button>
       </button>
