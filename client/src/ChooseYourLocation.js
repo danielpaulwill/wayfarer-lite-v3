@@ -90,12 +90,12 @@ function ChooseYourLocation({ onLocationSelect }) {
         <h2 className="locationHeader">{ruinsDone ? "Ruins Completed" : "Ruins"}</h2>
         <button className={ruinsDone ? "nullButton" : "locationButton"} value="Ruins" onClick={onLocationSelect} disabled={ruinsDone}></button>
       </button>
-      {/* <div> */}
+      <div id="chooseYourLocation">
         <button id="villageMap" value="Village" onClick={onLocationSelect}>
           <h2 className="locationHeader">Village</h2>
           <button className="locationButton" value="Village" onClick={onLocationSelect}></button>
         </button>
-      {/* </div> */}
+      </div>
     </div>
   )
 };
