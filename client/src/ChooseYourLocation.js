@@ -28,8 +28,17 @@ function ChooseYourLocation({ onLocationSelect, activateEndGame }) {
   // if locationData exists move on to event completeness verification
   useEffect(() => {
     if (locationData !== '') {
-      locationData.map(location => {
-        eventCompleteCheck(location)
+      locationData.forEach(location => {
+        // check if each event in a location is complete
+        let i = 0
+        if (location !== ''){
+          location.events.forEach(event => {
+          if (event.is_complete === true){
+            ++i
+          }})}
+          if (location.events.length === i){
+            updateLocationComplete(location)
+          }
       })
     }
   }, [locationData])
@@ -41,18 +50,17 @@ function ChooseYourLocation({ onLocationSelect, activateEndGame }) {
   }, [villageDone])
 
 
-  // check if each event in a location is complete
-  function eventCompleteCheck(location) {
-    let i = 0
-    if (location !== ''){
-      location.events.map(event => {
-        if (event.is_complete === true){
-          ++i
-    }})}
-    if (location.events.length === i){
-      updateLocationComplete(location)
-    }
-  }
+  // function eventCompleteCheck(location) {
+  //   let i = 0
+  //   if (location !== ''){
+  //     location.events.map(event => {
+  //       if (event.is_complete === true){
+  //         ++i
+  //   }})}
+  //   if (location.events.length === i){
+  //     updateLocationComplete(location)
+  //   }
+  // }
 
   // POST update to location
   function updateLocationComplete(location) {
