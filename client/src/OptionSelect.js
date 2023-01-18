@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function OptionSelect({ option, onOptionSelect, character }) {
   const [restricted, setRestricted] = useState(false)

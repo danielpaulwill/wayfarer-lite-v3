@@ -7,7 +7,7 @@ import GameContainer from "./GameContainer";
 
 function MainContainer({ user, handleMapView, setErrors }) {
   const [character, setCharacter] = useState('');
-  const [characterErrors, setCharacterErrors] = useState('')
+  // const [characterErrors, setCharacterErrors] = useState('')
 
   const blankAvatar = ("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/characters/blank.png")
   const archerAvatar = ("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/characters/archer.png")
@@ -112,7 +112,7 @@ function MainContainer({ user, handleMapView, setErrors }) {
     <div id="gameContainer">
       <CharacterSidebar avatar={characterAvatar} name={characterName} health={health} evil={evil} strength={strength} defense={defense} luck={luck} />
       <Routes>
-        <Route path="setup" element={<SetupContainer handleNameChange={handleNameChange} handleAvatarClick={handleAvatarClick} handleProfessionChange={handleProfessionChange} handleCharacterConfirm={handleCharacterConfirm} handleMapView={handleMapView} characterAvatar={characterAvatar} setErrors={setErrors} archerAvatar={archerAvatar} mageAvatar={mageAvatar} warriorAvatar={warriorAvatar} /*health={health} evil={evil} strength={strength} defense={defense} luck={luck} setCharacterAttributes={handleCharacterAttributes}*/ setupWorkaround={setupWorkaround} characterErrors={characterErrors} />} />
+        <Route path="setup" element={<SetupContainer handleNameChange={handleNameChange} handleAvatarClick={handleAvatarClick} handleProfessionChange={handleProfessionChange} handleCharacterConfirm={handleCharacterConfirm} handleMapView={handleMapView} characterAvatar={characterAvatar} setErrors={setErrors} archerAvatar={archerAvatar} mageAvatar={mageAvatar} warriorAvatar={warriorAvatar} /*health={health} evil={evil} strength={strength} defense={defense} luck={luck} setCharacterAttributes={handleCharacterAttributes}*/ setupWorkaround={setupWorkaround} />} />
         <Route path='play' element={<GameContainer character={character} />} />
       </Routes>
       <ItemsSidebar />
