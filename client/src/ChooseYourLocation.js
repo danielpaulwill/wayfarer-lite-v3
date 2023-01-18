@@ -80,15 +80,15 @@ function ChooseYourLocation({ onLocationSelect }) {
         <button className={forestDone ? "nullButton" : "locationButton"} value="Forest" onClick={onLocationSelect} disabled={forestDone}></button>
       </button>
       <button id={volcanoDone ? "volcanoNull" : "volcanoMap"} value="Volcano" onClick={onLocationSelect} disabled={volcanoDone}>
-        <h2 className="locationHeader">Volcano</h2>
+        <h2 className="locationHeader">{volcanoDone ? "Volcano Completed" : "Volcano"}</h2>
         <button className={volcanoDone ? "nullButton" : "locationButton"} value="Volcano" onClick={onLocationSelect} disabled={volcanoDone}></button>
       </button>
       <button id={beachDone ? "beachNull" : "beachMap"} value="Beach" onClick={onLocationSelect} disabled={beachDone}>
-        <h2 className="locationHeader">Beach</h2>
+        <h2 className="locationHeader">{beachDone ? "Beach Completed" : "Beach"}</h2>
         <button className={beachDone ? "nullButton" : "locationButton"} value="Beach" onClick={onLocationSelect} disabled={beachDone}></button>
       </button>
       <button id={ruinsDone ? "ruinsNull" : "ruinsMap"} value="Ruins" onClick={onLocationSelect} disabled={ruinsDone}>
-        <h2 className="locationHeader">Ruins</h2>
+        <h2 className="locationHeader">{ruinsDone ? "Ruins Completed" : "Ruins"}</h2>
         <button className={ruinsDone ? "nullButton" : "locationButton"} value="Ruins" onClick={onLocationSelect} disabled={ruinsDone}></button>
       </button>
 
