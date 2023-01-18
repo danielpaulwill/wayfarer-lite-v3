@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 // import Event from "./Event";
 
 function EventList({ goToIslandMap, location, onEventSelect, character }) {
-  const [allEvents, setAllEvents] = useState(location.events)
+  // const [allEvents, setAllEvents] = useState(location.events)
   const [eventsOptions, setEventsOptions] = useState()
   // const [locationMusic, setLocationMusic] = useState('')
+
+  let allEvents = location.events
 
   // const forestMusic = new Audio('https://audio.jukehost.co.uk/zkdzbDdAe5rkArhejjAsycueuONMzk4L')
   // const volcanoMusic = new Audio('https://audio.jukehost.co.uk/neGxVnheYUJCE1I8Y8Qtjuyo2XNWxoHX')

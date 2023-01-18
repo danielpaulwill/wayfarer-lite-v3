@@ -23,7 +23,7 @@ function LandingPage({ handleClick }) {
   return (
     <div id="welcome">
       <h1>WELCOME TO</h1>
-      <img id="logo" src="https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/pixelated-color-logo.png"></img>
+      <img id="logo" alt="8 bit logo" src="https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/pixelated-color-logo.png"></img>
       <div id={visibleButton ? 'noButton' : 'yesButton'}>
         <button id={invertedButton ? 'invertedButton' : 'welcomeButton'} onClick={handleClick}>Click me to begin!</button>
       </div>
