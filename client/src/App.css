@@ -303,6 +303,7 @@
   background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-forest.jpg");
   background-size: cover;
   background-position: right;
+  z-index: 2;
 }
 
 #forestMap:hover {
@@ -317,6 +318,7 @@
   background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-volcano.jpg");
   background-size: cover;
   background-position: left;
+  z-index: 2;
 }
 
 #volcanoMap:hover {
@@ -343,6 +345,7 @@
   background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-beach.jpg");
   background-size: cover;
   background-position: right;
+  z-index: 2;
 }
 
 #beachMap:hover {
@@ -357,6 +360,7 @@
   background-image: url("https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/locations/map-ruins.jpg");
   background-size: cover;
   background-position: right;
+  z-index: 2;
 }
 
 #ruinsMap:hover {
@@ -364,8 +368,8 @@
 }
 
 #villageMap {
-  width: 100%;
-  height: 100%;
+  width: 28%;
+  height: 46%;
   border: solid #FFF 2px;
   cursor: pointer;
   background-color: red;
@@ -373,11 +377,14 @@
   background-size: cover;
   background-position: right;
   z-index: 9;
-  margin: 0 0 0 auto;
   text-align: center;
-  /* position: fixed;
-  left: auto;
-  top: auto; */
+  position: absolute;
+  top: 30%;
+  left: 35%;
+}
+
+#villageNull {
+  display: none;
 }
 
 #villageMap:hover {
