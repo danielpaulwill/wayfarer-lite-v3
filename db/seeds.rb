@@ -76,14 +76,14 @@ r3o2 = Option.create(event_id: r3.id, action: "Option 2", result: "The second op
 r4o1 = Option.create(event_id: r4.id, action: "Option 1", result: "The first option of the fourth Ruins event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
 r4o2 = Option.create(event_id: r4.id, action: "Option 2", result: "The second option of the fourth Ruins event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
 
-vl1o1 = Option.create(event_id: vl1.id, action: "Option 1", result: "The first option of the first Ruins event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
-vl1o2 = Option.create(event_id: vl1.id, action: "Option 2", result: "The second option of the first Ruins event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
-vl2o1 = Option.create(event_id: vl2.id, action: "Option 1", result: "The first option of the second Ruins event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
-vl2o2 = Option.create(event_id: vl2.id, action: "Option 2", result: "The second option of the second Ruins event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
-vl3o1 = Option.create(event_id: vl3.id, action: "Option 1", result: "The first option of the third Ruins event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
-vl3o2 = Option.create(event_id: vl3.id, action: "Option 2", result: "The second option of the third Ruins event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
-vl4o1 = Option.create(event_id: vl4.id, action: "Option 1", result: "The first option of the fourth Ruins event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
-vl4o2 = Option.create(event_id: vl4.id, action: "Option 2", result: "The second option of the fourth Ruins event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
+vl1o1 = Option.create(event_id: vl1.id, action: "Option 1", result: "The first option of the first Village event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
+vl1o2 = Option.create(event_id: vl1.id, action: "Option 2", result: "The second option of the first Village event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
+vl2o1 = Option.create(event_id: vl2.id, action: "Option 1", result: "The first option of the second Village event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
+vl2o2 = Option.create(event_id: vl2.id, action: "Option 2", result: "The second option of the second Village event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
+vl3o1 = Option.create(event_id: vl3.id, action: "Option 1", result: "The first option of the third Village event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
+vl3o2 = Option.create(event_id: vl3.id, action: "Option 2", result: "The second option of the third Village event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
+vl4o1 = Option.create(event_id: vl4.id, action: "Option 1", result: "The first option of the fourth Village event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
+vl4o2 = Option.create(event_id: vl4.id, action: "Option 2", result: "The second option of the fourth Village event.", is_complete: false, restriction_type: nil, restriction_value: nil, restriction_operation: nil)
 
 
 
