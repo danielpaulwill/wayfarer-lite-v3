@@ -6,7 +6,7 @@ function ChooseYourLocation({ onLocationSelect }) {
   const [volcanoDone, setVolcanoDone] = useState(false)
   const [beachDone, setBeachDone] = useState(false)
   const [ruinsDone, setRuinsDone] = useState(false)
-  const [villageDone, setVillageDone] = useState(false)
+  const [villageVisible, setVillageVisible] = useState(false)
 
   // useEffect(() => {
   //   setForestDone(forestData.is_complete)
@@ -34,14 +34,13 @@ function ChooseYourLocation({ onLocationSelect }) {
 
   // check if each event in a location is complete
   function eventCompleteCheck(location) {
-    console.log({location})
     let i = 0
     if (location !== ''){
       location.events.map(event => {
         if (event.is_complete === true){
           ++i
     }})}
-    if (i === 4){
+    if (location.events.length === i){
       updateLocationComplete(location)
     }
   }
@@ -91,11 +90,12 @@ function ChooseYourLocation({ onLocationSelect }) {
         <h2 className="locationHeader">{ruinsDone ? "Ruins Completed" : "Ruins"}</h2>
         <button className={ruinsDone ? "nullButton" : "locationButton"} value="Ruins" onClick={onLocationSelect} disabled={ruinsDone}></button>
       </button>
-
-      <button id={villageDone ? "villageNull" : "villageMap"} value="Village" onClick={onLocationSelect} disabled={villageDone}>
-        <h2 className="locationHeader">Village</h2>
-        <button className={villageDone ? "nullButton" : "locationButton"} value="Village" onClick={onLocationSelect} disabled={villageDone}></button>
-      </button>
+      {/* <div> */}
+        <button id="villageMap" value="Village" onClick={onLocationSelect}>
+          <h2 className="locationHeader">Village</h2>
+          <button className="locationButton" value="Village" onClick={onLocationSelect}></button>
+        </button>
+      {/* </div> */}
     </div>
   )
 };
