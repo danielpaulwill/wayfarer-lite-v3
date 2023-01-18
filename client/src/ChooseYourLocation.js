@@ -76,7 +76,7 @@ function ChooseYourLocation({ onLocationSelect }) {
   return (
     <div id="chooseYourLocation">
       <button id={forestDone ? "forestNull" : "forestMap"} value="Forest" onClick={onLocationSelect} disabled={forestDone} >
-        <h2 className="locationHeader">Forest</h2>
+        <h2 className="locationHeader">{forestDone ? "Forest Completed" : "Forest"}</h2>
         <button className={forestDone ? "nullButton" : "locationButton"} value="Forest" onClick={onLocationSelect} disabled={forestDone}></button>
       </button>
       <button id={volcanoDone ? "volcanoNull" : "volcanoMap"} value="Volcano" onClick={onLocationSelect} disabled={volcanoDone}>
@@ -91,7 +91,7 @@ function ChooseYourLocation({ onLocationSelect }) {
         <h2 className="locationHeader">Ruins</h2>
         <button className={ruinsDone ? "nullButton" : "locationButton"} value="Ruins" onClick={onLocationSelect} disabled={ruinsDone}></button>
       </button>
-      
+
       <button id={villageDone ? "villageNull" : "villageMap"} value="Village" onClick={onLocationSelect} disabled={villageDone}>
         <h2 className="locationHeader">Village</h2>
         <button className={villageDone ? "nullButton" : "locationButton"} value="Village" onClick={onLocationSelect} disabled={villageDone}></button>
