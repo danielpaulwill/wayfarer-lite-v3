@@ -3,19 +3,21 @@ import React, { useEffect, useState } from "react";
 function CharacterSidebar({ character, avatar, name, health, evil, strength, defense, luck }) {
   const [evilVisible, setEvilVisible] = useState(true)
   const [evilLevel, setEvilLevel] = useState()
-  const [evilText, setEvilText] = useState()
-
-  console.log({evilLevel})
+  const [evilText, setEvilText] = useState('hey')
 
   useEffect(() => {
     if (evil <= 25) {
       setEvilLevel("evilBar1")
+      setEvilText("Level: Evil")
     } else if (evil > 25 && evil < 51) {
       setEvilLevel("evilBar2")
+      setEvilText("Level: Evil Neutral")
     } else if (evil > 50 && evil < 76) {
       setEvilLevel("evilBar3")
+      setEvilText("Level: Good Neutral")
     } else if (evil >= 75) {
       setEvilLevel("evilBar4")
+      setEvilText("Level: Good")
     }
   }, [evil])
 
@@ -35,13 +37,7 @@ function CharacterSidebar({ character, avatar, name, health, evil, strength, def
         <div id={(luck === '') ? "blankBar" : "luckBar"} style={{width: `${luck}%`}}></div>
         <p id={evilVisible ? 'visibleEvil' : 'invisibleEvil'}>Evil: {evil}</p>
         <div id={((evil !== '') && evilVisible) ? evilLevel : "blankBar"} style={{width: `${evil}%`}}></div>
-        <p
-          id={
-            (evilVisible && evilLevel === "evilBar1") ? 'visibleEvil' : 'invisibleEvil'}>{
-              if (evilVisible && evilLevel === "evilBar1"){
-                "EVIL"
-              }
-            }</p>
+        <p id={evilVisible ? 'visibleEvilLevel' : 'invisibleEvil'}>{evilText}</p>
       </div>
     </div>
   )
