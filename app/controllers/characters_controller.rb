@@ -14,4 +14,14 @@ class CharactersController < ApplicationController
     render json: characters
   end
 
+  def update
+    character = Character.find_by(id: params[:id])
+    if character
+      character.update(evil: params[:evil])
+      render json: character, status: :accepted
+    else
+      render json: { error: "Not updated" }, status: :unauthorized
+    end
+  end
+
 end
