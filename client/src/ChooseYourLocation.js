@@ -15,14 +15,13 @@ function ChooseYourLocation({ onLocationSelect }) {
   //   setRuinsDone(ruinsData.is_complete)
   // }, [ruinsData])
 
+  // check if all locations are done, if yes, village appears
   useEffect(() => {
     if (forestDone === true && volcanoDone === true && beachDone === true && ruinsDone === true) {
       setVillageVisible(true)
     }  
   }, [forestDone, volcanoDone, beachDone, ruinsDone])
 
-
-  
   // fetch location data and set state
   useEffect(() => {
     fetch('/locations')
