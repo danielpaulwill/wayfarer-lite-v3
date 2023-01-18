@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 function CharacterSidebar({ character, avatar, name, health, evil, strength, defense, luck }) {
+  const [evilVisible, setEvilVisible] = useState(true)
 
   return (
     <div id="characterSidebar">
@@ -16,6 +17,8 @@ function CharacterSidebar({ character, avatar, name, health, evil, strength, def
         <div id={(defense === '') ? "blankBar" : "defenseBar"} style={{width: `${defense}%`}}></div>
         <p>Luck: {luck}</p>
         <div id={(luck === '') ? "blankBar" : "luckBar"} style={{width: `${luck}%`}}></div>
+        <p id={evilVisible ? 'visibleEvil' : 'invisibleEvil'} >Evil: {evil}</p>
+        <div id={((evil !== '') && evilVisible) ? "luckBar" : "blankBar"} style={{width: `${luck}%`}}></div>
       </div>
     </div>
   )

@@ -686,3 +686,10 @@
   background-color: #FFF;
 } */
 
+#invisibleEvil {
+  display: none;
+}
+
+#visibleEvil {
+  display: block;
+}

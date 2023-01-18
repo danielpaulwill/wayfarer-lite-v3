@@ -2,7 +2,7 @@
 user = User.create(username: "danielpaulw", password: "Test1")
 
 # CHARACTER
-character = Character.create(name: "Ivan", avatar: "https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/characters/archer.png", health: 50, evil: 50, strength: 50, defense: 50, luck: 50, user_id: user.id)
+character = Character.create(name: "Ivan", avatar: "https://raw.githubusercontent.com/danielpaulwill/wayfarer-lite-v3/main/client/src/assets/characters/archer.png", health: 50, evil: 100, strength: 50, defense: 50, luck: 50, user_id: user.id)
 
 # LOCATIONS
 forest = Location.create(character_id: character.id, name: "Forest", description: "You find yourself in a dark, thick forest. The tall trees block out most of the light and the underbrush is dense and tangled. The air is heavy with the smell of damp earth and decaying leaves, and the ground is covered in a thick layer of moss and fallen branches. The forest is alive with the sound of chirping birds and rustling leaves, but there are also other, more sinister noises - the snarl of a predator, the hiss of a venomous snake, the eerie wail of something up in the branches.;;The trees in this forest are ancient and massive, with thick trunks and branches that stretch high into the sky. The canopy is so dense that it is difficult to see more than a few feet ahead, creating a sense of unease and isolation.", is_complete: false)
