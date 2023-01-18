@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from "react";
 
-function ChooseYourLocation({ onLocationSelect }) {
+function ChooseYourLocation({ onLocationSelect, activateEndGame }) {
   const [locationData, setLocationData] = useState('')
   const [forestDone, setForestDone] = useState(false)
   const [volcanoDone, setVolcanoDone] = useState(false)
   const [beachDone, setBeachDone] = useState(false)
   const [ruinsDone, setRuinsDone] = useState(false)
+  const [villageDone, setVillageDone] = useState(false)
   const [villageVisible, setVillageVisible] = useState(false)
 
-  // useEffect(() => {
-  //   setForestDone(forestData.is_complete)
-  //   setVolcanoDone(volcanoData.is_complete)
-  //   setBeachDone(beachData.is_complete)
-  //   setRuinsDone(ruinsData.is_complete)
-  // }, [ruinsData])
+  console.log(locationData)
 
   // check if all locations are done, if yes, village appears
   useEffect(() => {
@@ -37,6 +33,13 @@ function ChooseYourLocation({ onLocationSelect }) {
       })
     }
   }, [locationData])
+
+  useEffect(() => {
+    if (villageDone === true){
+      activateEndGame()
+    }
+  }, [villageDone])
+
 
   // check if each event in a location is complete
   function eventCompleteCheck(location) {
@@ -71,7 +74,9 @@ function ChooseYourLocation({ onLocationSelect }) {
           setBeachDone(location.is_complete)
         } else if (location.name === 'Ruins'){
           setRuinsDone(location.is_complete)
-        } 
+        } else if (location.name === "Village"){
+          setVillageDone(location.is_complete)
+        }
       })
   }
   

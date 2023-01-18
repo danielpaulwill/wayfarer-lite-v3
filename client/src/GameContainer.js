@@ -3,6 +3,7 @@ import ChooseYourLocation from "./ChooseYourLocation";
 import EventList from "./EventList";
 import Event from "./Event";
 import OptionResult from "./OptionResult";
+import EndGame from "./EndGame"
 
 function GameContainer({ character }) {
   
@@ -10,7 +11,8 @@ function GameContainer({ character }) {
   // const [selectedLocation, setSelectedLocation] = useState('')
 
   const eventList = <EventList character={character} location={location} onEventSelect={handleEventSelect} goToIslandMap={goToIslandMap} />
-  const chooseYourLocation = <ChooseYourLocation onLocationSelect={handleLocationSelect} />
+  const chooseYourLocation = <ChooseYourLocation onLocationSelect={handleLocationSelect} activateEndGame={activateEndGame} />
+  const endGame = <EndGame />
   // const loadingPage = <LoadingPage location={location} locationWorkaround={locationWorkaround} />
 
   const [currentPage, setCurrentPage] = useState(chooseYourLocation)
@@ -69,6 +71,10 @@ function GameContainer({ character }) {
   function handleOptionSelect(option) {
     const optionResult = <OptionResult option={option} returnToLocation={returnToLocation} />
     setCurrentPage(optionResult)
+  }
+
+  function activateEndGame() {
+    setCurrentPage(endGame)
   }
   
   return (
