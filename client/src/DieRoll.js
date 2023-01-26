@@ -1,19 +1,25 @@
-function DieRoll () {
+import { useEffect, useState } from "react";
 
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
+function DieRoll () {
+  const [roll, setRoll] = useState()
+
+  function rollDice() {
+    return Math.floor(Math.random() * 4) + 1;
   }
   
-  let roll = getRandomInt(1, 21)
-  
+  useEffect(() => {
+    let rollOne = rollDice()
+    setRoll(rollOne)
+  }, [])
+
   
   return (
     <div className="center">
-      <h1>DieRoll</h1>
-      <br></br>
-      <h3>{roll}</h3>
+      <div>
+        <h1>DieRoll</h1>
+        <h2>{roll}</h2>
+        <button className="normalButton" onClick={e => setRoll(rollDice())}>Roll Again</button>
+      </div>
     </div>
   )
 };
