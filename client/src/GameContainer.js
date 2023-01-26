@@ -4,6 +4,7 @@ import EventList from "./EventList";
 import Event from "./Event";
 import OptionResult from "./OptionResult";
 import EndGame from "./EndGame"
+import DieRoll from "./DieRoll"
 
 function GameContainer({ character }) {
   
@@ -13,9 +14,10 @@ function GameContainer({ character }) {
   const eventList = <EventList character={character} location={location} onEventSelect={handleEventSelect} goToIslandMap={goToIslandMap} />
   const chooseYourLocation = <ChooseYourLocation onLocationSelect={handleLocationSelect} activateEndGame={activateEndGame} />
   const endGame = <EndGame />
+  const dieRoll = <DieRoll />
   // const loadingPage = <LoadingPage location={location} locationWorkaround={locationWorkaround} />
 
-  const [currentPage, setCurrentPage] = useState(chooseYourLocation)
+  const [currentPage, setCurrentPage] = useState(dieRoll)
 
   function handleLocationSelect(e) {
     fetch('/locations-select', {
