@@ -3,12 +3,18 @@ import { useEffect, useState } from "react";
 function DieRoll () {
   const [roll, setRoll] = useState()
 
+  let i = 0
+
   function rollDice() {
-    for (let i = 0; i < 10; i++) {
-      console.log(i)
+    setTimeout(function() {
       setRoll(Math.ceil(Math.random() * 20))
-    }
+      i++;
+      if (i < 12) {
+        rollDice();
+      }
+    }, 65)
   }
+
 
   // function gameShow() {
   //   if (i < 10) {
@@ -19,9 +25,9 @@ function DieRoll () {
   return (
     <div className="center">
       <div>
-        <h1>DieRoll</h1>
+        <h1>Die Roll</h1>
         <h2>{roll}</h2>
-        <button className="normalButton" onClick={e => rollDice()}>Roll Again</button>
+        <button className="normalButton" onClick={e => rollDice()}>Roll Dice</button>
       </div>
     </div>
   )
