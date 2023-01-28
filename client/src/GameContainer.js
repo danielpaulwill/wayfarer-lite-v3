@@ -9,14 +9,14 @@ import DieRoll from "./DieRoll"
 function GameContainer({ character }) {
   
   const [location, setLocation] = useState()
-  const [roll, setRoll] = useState("-")
+  // const [roll, setRoll] = useState("-")
 
   // const [selectedLocation, setSelectedLocation] = useState('')
 
   const eventList = <EventList character={character} location={location} onEventSelect={handleEventSelect} goToIslandMap={goToIslandMap} />
   const chooseYourLocation = <ChooseYourLocation onLocationSelect={handleLocationSelect} activateEndGame={activateEndGame} />
   const endGame = <EndGame />
-  const dieRoll = <DieRoll roll={roll} passTheDie={passTheDie}/>
+  const dieRoll = <DieRoll />
   // const loadingPage = <LoadingPage location={location} locationWorkaround={locationWorkaround} />
 
   const [currentPage, setCurrentPage] = useState(dieRoll)
@@ -81,10 +81,10 @@ function GameContainer({ character }) {
     setCurrentPage(endGame)
   }
 
-  function passTheDie(num) {
-    console.log('passed through')
-    setRoll(num)
-  }
+  // function passTheDie(num) {
+  //   console.log('passed through')
+  //   setRoll(num)
+  // }
   
   return (
     <div className="gameArea">

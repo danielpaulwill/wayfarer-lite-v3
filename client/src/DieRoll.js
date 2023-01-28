@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 
-function DieRoll ({ roll, passTheDie }) {
-  // const [roll, setRoll] = useState("-")
-  const [localRoll, setLocalRoll] = useState()
+function DieRoll () {
+  const [roll, setRoll] = useState("-")
+  // const [localRoll, setLocalRoll] = useState()
 
-  useEffect(() => {
-    setLocalRoll(roll)
-  }, [roll])
+  // useEffect(() => {
+  //   console.log({roll})
+  //   setLocalRoll(roll)
+  // }, [roll])
 
   let i = 0
 
@@ -16,10 +17,9 @@ function DieRoll ({ roll, passTheDie }) {
   // }
   
   function rollDice() {
-    console.log(i)
     setTimeout(function() {
-      let n = (Math.ceil(Math.random() * 20))
-      passTheDie(n)
+      setRoll(Math.ceil(Math.random() * 20))
+      // passTheDie(n)
       i++;
       if (i < 12) {
         rollDice();
@@ -30,7 +30,7 @@ function DieRoll ({ roll, passTheDie }) {
   return (
     <div id="dice">
       <div>
-        <h2>{localRoll}</h2>
+        <h2>{roll}</h2>
         <button className="normalButton" onClick={e => rollDice()}>Roll Dice</button>
       </div>
     </div>
