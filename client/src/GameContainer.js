@@ -7,11 +7,8 @@ import EndGame from "./EndGame"
 import DieRoll from "./DieRoll"
 
 function GameContainer({ character }) {
-  
   const [location, setLocation] = useState()
-  const [localRoll, setLocalRoll] = useState()
-
-  // const [selectedLocation, setSelectedLocation] = useState('')
+  const [roll, setRoll] = useState()
 
   const eventList = <EventList character={character} location={location} onEventSelect={handleEventSelect} goToIslandMap={goToIslandMap} />
   const chooseYourLocation = <ChooseYourLocation onLocationSelect={handleLocationSelect} activateEndGame={activateEndGame} />
@@ -19,7 +16,7 @@ function GameContainer({ character }) {
   const dieRoll = <DieRoll passTheDie={passTheDie}/>
   // const loadingPage = <LoadingPage location={location} locationWorkaround={locationWorkaround} />
 
-  const [currentPage, setCurrentPage] = useState(dieRoll)
+  const [currentPage, setCurrentPage] = useState(chooseYourLocation)
 
   function handleLocationSelect(e) {
     fetch('/locations-select', {
@@ -82,7 +79,7 @@ function GameContainer({ character }) {
   }
 
   function passTheDie(num) {
-    console.log(num)
+    setRoll(num)
   }
   
   return (

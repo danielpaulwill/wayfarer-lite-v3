@@ -14,8 +14,8 @@ village = Location.create(character_id: character.id, name: "Village", descripti
 # EVENTS
 f1 = Event.create(location_id: forest.id, name: "Through the mist you see several cages with odd looking creatures in them.", description: "What will you do?", is_complete: false)
 f2 = Event.create(location_id: forest.id, name: "In the distance you hear someone calling out for help.", description: "What will you do?", is_complete: false)
-f3 = Event.create(location_id: forest.id, name: "Event Three", description: "The third Forest event.", is_complete: false)
-f4 = Event.create(location_id: forest.id, name: "Event Four", description: "The fourth Forest event.", is_complete: false)
+f3 = Event.create(location_id: forest.id, name: "You see large claw marks on a nearby tree.", description: "The third Forest event.", is_complete: false)
+f4 = Event.create(location_id: forest.id, name: "You can hear the far-off sound of water hitting rocks", description: "You stumble through the trees and see a small waterfall. There is a beam of light breaking through the tree tops, illuminating the clear blue water. The waterfall is a welcome sight in this dark and dreary wood. The waterfall is so beautiful that the longer you look at it, the more it seems to sparkle like a large fluid diamond", is_complete: false)
 
 v1 = Event.create(location_id: volcano.id, name: "You see a group of people gathered around a giant crystal", description: "What will you do?", is_complete: false)
 v2 = Event.create(location_id: volcano.id, name: "Through a thick layer of ash you see a hidden passage at the base of the volcano", description: "What will you do?", is_complete: false)

@@ -9,8 +9,6 @@ function ChooseYourLocation({ onLocationSelect, activateEndGame }) {
   const [villageDone, setVillageDone] = useState(false)
   const [villageVisible, setVillageVisible] = useState(false)
 
-  console.log(locationData)
-
   // check if all locations are done, if yes, village appears
   useEffect(() => {
     if (forestDone === true && volcanoDone === true && beachDone === true && ruinsDone === true) {
