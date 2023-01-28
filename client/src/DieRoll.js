@@ -1,14 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function DieRoll ({ roll, passTheDie }) {
   // const [roll, setRoll] = useState("-")
+  const [localRoll, setLocalRoll] = useState()
+
+  useEffect(() => {
+    setLocalRoll(roll)
+  }, [roll])
 
   let i = 0
 
   
-  if (i === 12) {
-    let i = 0
-  }
+  // if (i === 12) {
+  //   let i = 0
+  // }
   
   function rollDice() {
     console.log(i)
@@ -25,7 +30,7 @@ function DieRoll ({ roll, passTheDie }) {
   return (
     <div id="dice">
       <div>
-        <h2>{roll}</h2>
+        <h2>{localRoll}</h2>
         <button className="normalButton" onClick={e => rollDice()}>Roll Dice</button>
       </div>
     </div>
