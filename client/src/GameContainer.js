@@ -9,7 +9,7 @@ import DieRoll from "./DieRoll"
 function GameContainer({ character }) {
   
   const [location, setLocation] = useState()
-  const [roll, setRoll] = useState()
+  const [roll, setRoll] = useState("-")
 
   // const [selectedLocation, setSelectedLocation] = useState('')
 

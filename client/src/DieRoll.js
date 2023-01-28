@@ -1,13 +1,20 @@
 import { useState } from "react";
 
-function DieRoll () {
-  const [roll, setRoll] = useState()
+function DieRoll ({ roll, passTheDie }) {
+  // const [roll, setRoll] = useState("-")
 
   let i = 0
 
+  
+  if (i === 12) {
+    let i = 0
+  }
+  
   function rollDice() {
+    console.log(i)
     setTimeout(function() {
-      setRoll(Math.ceil(Math.random() * 20))
+      let n = (Math.ceil(Math.random() * 20))
+      passTheDie(n)
       i++;
       if (i < 12) {
         rollDice();
