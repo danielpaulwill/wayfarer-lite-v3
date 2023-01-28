@@ -56,7 +56,7 @@ Once the official game launches, there will be a help page where support tickets
   - List of future features
 - Add two more locations
   - ~~On frontend~~
-  - On backend
+  - ~~On backend~~
 - Built out storyline
 - 3 different ending options
 - Item functionality
@@ -68,11 +68,13 @@ Once the official game launches, there will be a help page where support tickets
 - 4 character options, replacing all three current options
 - Music for each location, scene, or event
 - Digital dice roll to determine action achievement
-- Grey out location after all events from that location have been played
+  - ~~Build die roll~~
+  - Implement the die roll on option results page
+- ~~Grey out location after all events from that location have been played~~
 - Create password reset functionality
 
 ##### Bug Fixes & Tweaks
-- Add Location image to the location database: parse that image onto the event list page
+- ~~Add Location image to the location database: parse that image onto the event list page~~
 - For each locations music, check to see if other music is currently playing and stop that music before playing other music
 - Include a clear note on the login screen to remember your username and password. The game is still in development and currently can not reset passwords.
 - Include note before landing page to turn speakers on for ideal game experience

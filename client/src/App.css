@@ -735,3 +735,10 @@
   /* background-color: red; */
   margin-top: 0px;
 }
+
+#dice {
+  height: 23vh;
+  width: 12vw;
+  justify-content: center;
+  border: solid 1px #FFF;
+  }

@@ -17,7 +17,7 @@ function GameContainer({ character }) {
   const dieRoll = <DieRoll />
   // const loadingPage = <LoadingPage location={location} locationWorkaround={locationWorkaround} />
 
-  const [currentPage, setCurrentPage] = useState(dieRoll)
+  const [currentPage, setCurrentPage] = useState(chooseYourLocation)
 
   function handleLocationSelect(e) {
     fetch('/locations-select', {

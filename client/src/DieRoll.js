@@ -23,9 +23,8 @@ function DieRoll () {
   // }}
   
   return (
-    <div className="center">
+    <div id="dice">
       <div>
-        <h1>Die Roll</h1>
         <h2>{roll}</h2>
         <button className="normalButton" onClick={e => rollDice()}>Roll Dice</button>
       </div>
