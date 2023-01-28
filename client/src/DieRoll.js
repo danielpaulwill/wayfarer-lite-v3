@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function DieRoll () {
   const [roll, setRoll] = useState()
@@ -14,13 +14,6 @@ function DieRoll () {
       }
     }, 65)
   }
-
-
-  // function gameShow() {
-  //   if (i < 10) {
-  //     setInterval(rollDice, 10)
-  //   } else if (i >)
-  // }}
   
   return (
     <div id="dice">
