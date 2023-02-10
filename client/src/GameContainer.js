@@ -5,6 +5,7 @@ import Event from "./Event";
 import OptionResult from "./OptionResult";
 import EndGame from "./EndGame"
 import DieRoll from "./DieRoll"
+import EvilReveal from "./EvilReveal";
 
 function GameContainer({ character }) {
   const [location, setLocation] = useState()
@@ -14,9 +15,10 @@ function GameContainer({ character }) {
   const chooseYourLocation = <ChooseYourLocation onLocationSelect={handleLocationSelect} activateEndGame={activateEndGame} />
   const endGame = <EndGame />
   const dieRoll = <DieRoll passTheDie={passTheDie}/>
+  const evilReveal = <EvilReveal />
   // const loadingPage = <LoadingPage location={location} locationWorkaround={locationWorkaround} />
 
-  const [currentPage, setCurrentPage] = useState(chooseYourLocation)
+  const [currentPage, setCurrentPage] = useState(evilReveal)
 
   function handleLocationSelect(e) {
     fetch('/locations-select', {

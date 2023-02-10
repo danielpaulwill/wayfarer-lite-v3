@@ -1,11 +1,15 @@
-function EvilReveal () {
+import OptionSelect from "./OptionSelect";
 
+function EvilReveal () {
+  
+  // let options = event.options.map((option) => <OptionSelect character={character} key={option.id} option={option} onOptionSelect={onOptionSelect} />)
   
   return (
-    <div id="dice">
+    <div className="center">
       <div>
-        <h2>{roll}</h2>
-        <button className="normalButton" onClick={e => rollDice()}>Roll Dice</button>
+        {/* <h2>{event.name}</h2>
+        <p>{event.description}</p>
+        {options} */}
       </div>
     </div>
   )
