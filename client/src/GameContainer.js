@@ -18,7 +18,7 @@ function GameContainer({ character }) {
   const evilReveal = <EvilReveal />
   // const loadingPage = <LoadingPage location={location} locationWorkaround={locationWorkaround} />
 
-  const [currentPage, setCurrentPage] = useState(evilReveal)
+  const [currentPage, setCurrentPage] = useState(chooseYourLocation)
 
   function handleLocationSelect(e) {
     fetch('/locations-select', {
