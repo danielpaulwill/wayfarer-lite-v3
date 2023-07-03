@@ -1,6 +1,6 @@
 # Wayfarer
 
-## Full game release date: July 1, 2023
+## Full game release date: October 15, 2023
 
 Welcome to Wayfarer. A multiple choice mystery RPG with some shocking twists and turns.
 
@@ -45,6 +45,11 @@ Then navigate to http://localhost:4000/
 
 ### Support
 Once the official game launches, there will be a help page where support tickets can be submitted.
+
+Before running locally, navigate to the client folder and change the node version to 16 by running the following code:
+```
+nvm install 16
+```
 <p>&nbsp;</p>
 
 
